@@ -17,7 +17,7 @@ const metaDataQuery = graphql`
   }
 `;
 
-const Seo = () => {
+const Seo: React.FC = () => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(metaDataQuery);
   const { title, titleTemplate, description, image, siteUrl } =
