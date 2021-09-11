@@ -1,12 +1,12 @@
 module.exports = {
-  purge: ['./pages/**/*.js', './components/**/*.js'],
+  purge: ['./pages/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'media', // or 'media' or 'class'
   theme: {
     extend: {
       fontFamily: {
         display: ['Squada One', 'system-ui', 'cursive'],
         heading: ['Raleway', 'monospace'],
-        body: ['Open Sans', 'system-ui', 'sans-serif'],
+        sans: ['Open Sans', 'Helvetica', 'Arial', 'sans-serif'],
       },
       colors: {
         dark: {
