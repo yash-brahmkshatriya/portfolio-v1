@@ -5,14 +5,16 @@ import Salutation from './Salutation';
 
 const Intro = () => {
   return (
-    <Section className="bg-dark text-white">
-      <Container>
-        <div className="flex items-center justify-center text-center md:container md:mx-auto">
-          <Salutation />
-        </div>
+    <Section id="intro" className="min-h-screen">
+      <Container center className="text-center">
+        <Salutation />
       </Container>
     </Section>
   );
 };
 
 export default Intro;
+
+{
+  /* <div className="flex items-center justify-center text-center md:container md:mx-auto"> */
+}

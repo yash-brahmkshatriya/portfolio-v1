@@ -3,10 +3,15 @@ import React from 'react';
 interface props {
   className?: string;
   children?: React.ReactNode;
+  id?: string;
 }
 
-const Section = ({ className, children }: props) => {
-  return <div className={`min-h-screen ${className}`}>{children}</div>;
+const Section = ({ className, children, id }: props) => {
+  return (
+    <section className={className} id={id}>
+      {children}
+    </section>
+  );
 };
 
 export default Section;

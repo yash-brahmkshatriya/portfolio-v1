@@ -6,11 +6,11 @@ import Seo from '../components/Seo';
 
 const IndexPage = () => {
   return (
-    <>
+    <Layout>
       <Seo />
       <Intro />
       <About />
-    </>
+    </Layout>
   );
 };
 

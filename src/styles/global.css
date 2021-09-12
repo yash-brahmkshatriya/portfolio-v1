@@ -7,4 +7,22 @@
   .border-1 {
     border-width: 1px;
   }
+  .sidebar::after {
+    width: 1px;
+    height: 100px;
+    display: block;
+    content: '';
+    background-color: #ededed;
+  }
+}
+
+@layer components {
+  .social-icon {
+    @apply text-white transition duration-200 transform lg:mb-4 hover:-translate-y-1 hover:text-secondary focus:-translate-y-1 focus:text-secondary;
+  }
+}
+
+html,
+body {
+  height: 100%;
 }

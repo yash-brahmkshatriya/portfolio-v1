@@ -6,7 +6,7 @@ module.exports = {
       fontFamily: {
         display: ['Squada One', 'system-ui', 'cursive'],
         heading: ['Raleway', 'monospace'],
-        sans: ['Open Sans', 'Helvetica', 'Arial', 'sans-serif'],
+        body: ['Open Sans', 'Helvetica', 'Arial', 'sans-serif'],
       },
       colors: {
         dark: {
@@ -22,7 +22,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      rotate: ['group-hover'],
+    },
   },
   plugins: [],
 };
