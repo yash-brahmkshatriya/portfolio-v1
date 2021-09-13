@@ -27,7 +27,7 @@ const Salutation = () => {
       <div className="mt-10">
         <Link to="/#about">
           <button
-            className="px-5 py-1 text-2xl transition duration-200 ease-in border-white group border-1 hover:border-secondary hover:bg-secondary"
+            className="px-5 py-1 text-2xl transition duration-200 ease-in border-white group border-1 hover:border-secondary hover:bg-secondary focus:border-secondary focus:bg-secondary"
             type="button"
           >
             Know More

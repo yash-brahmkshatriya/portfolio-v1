@@ -19,7 +19,7 @@ interface socialLiProps {
 }
 
 const Icon = ({ name, className, size }: iconProps) => {
-  const sz = size || 25;
+  const sz = size || 20;
   const classes = className || '';
   switch (name) {
     case 'Github':
@@ -36,13 +36,15 @@ const Icon = ({ name, className, size }: iconProps) => {
 };
 
 const SocialLi = ({ sm, idx, className, targetSelf }: socialLiProps) => {
+  const extraClasses = className || '';
   return (
-    <li key={idx} className={`social-icon ${className}`}>
+    <li key={idx} className={`social-icons ${extraClasses}`}>
       <a
         href={sm.url}
         aria-label={sm.name}
         target={targetSelf ? '_self' : '_blank'}
         rel="noreferrer"
+        className="social-icon"
       >
         <Icon name={sm.name} />
       </a>

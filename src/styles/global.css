@@ -17,8 +17,11 @@
 }
 
 @layer components {
+  .social-icons {
+    @apply text-white lg:mb-4;
+  }
   .social-icon {
-    @apply text-white transition duration-200 transform lg:mb-4 hover:-translate-y-1 hover:text-secondary focus:-translate-y-1 focus:text-secondary;
+    @apply inline-block transition duration-200 ease-linear transform hover:-translate-y-1 hover:text-secondary focus:-translate-y-1 focus:text-secondary;
   }
 }
 
