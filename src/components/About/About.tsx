@@ -2,20 +2,20 @@ import React from 'react';
 import Container from '../Utils/Container';
 import Section from '../Utils/Section';
 import AboutParagraph from './AboutParagraph';
+import Photo from './Photo';
 
 const About = () => {
   return (
-    <Section id="about">
-      <Container>
-        <div className="flex flex-col items-center justify-center gap-6">
-          <h1 className="text-3xl lg:text-5xl font-display text-primary">
-            About Me
-          </h1>
-          <div className="flex flex-col-reverse items-center justify-between gap-20 md:flex-row">
-            <AboutParagraph />
-          </div>
-        </div>
-      </Container>
+    <Section id="about" className="min-h-screen py-10">
+      <h2 className="section-heading after-h-line">About Me</h2>
+      <div className="block grid-cols-2 gap-12 md:grid">
+        <AboutParagraph />
+        <Photo />
+      </div>
+      {/* <div className="flex flex-col flex-wrap items-center justify-center gap-12 md:flex-row">
+        <AboutParagraph />
+        <Photo />
+      </div> */}
     </Section>
   );
 };

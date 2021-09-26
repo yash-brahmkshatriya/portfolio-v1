@@ -7,7 +7,7 @@ interface props {
 }
 
 const Container = ({ children, className, center }: props) => {
-  let classes = `max-w-screen-2xl mx-auto ${className} min-h-screen`;
+  let classes = `max-w-screen-2xl mx-auto ${className}`;
   if (center) {
     classes = `${classes} flex items-center justify-center`;
   }

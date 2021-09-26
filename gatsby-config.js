@@ -9,5 +9,12 @@ module.exports = {
     description: 'Competitive Coder | Full Stack Web Developer',
     image: '/images/yash.png',
   },
-  plugins: ['gatsby-plugin-postcss', 'gatsby-plugin-react-helmet'],
+  plugins: [
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
+    // 'gatsby-source-filesystem',
+  ],
 };

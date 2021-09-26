@@ -13,7 +13,7 @@ interface socialLiProps {
     name: string;
     url: string;
   };
-  idx?: number;
+  idx?: number | string;
   className?: string;
   targetSelf?: boolean;
 }
@@ -60,6 +60,7 @@ const Socials = () => {
       <SocialLi
         sm={{ name: 'Mail', url: `mailto:${config.email}` }}
         targetSelf
+        idx="email"
         className="lg:hidden"
       />
     </ul>

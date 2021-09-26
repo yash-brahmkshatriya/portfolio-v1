@@ -6,9 +6,9 @@ interface props {
   id?: string;
 }
 
-const Section = ({ className, children, id }: props) => {
+const Section = ({ className = '', children, id }: props) => {
   return (
-    <section className={className} id={id}>
+    <section className={`${className} container mx-auto md:px-7 px-5`} id={id}>
       {children}
     </section>
   );

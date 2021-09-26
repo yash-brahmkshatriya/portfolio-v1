@@ -15,15 +15,15 @@ module.exports = {
           // light: '#444444',
           // DEFAULT: '#171717',
         },
-        primary: '#E31B6D',
-        secondary: '#04C3C9',
-        white: '#EDEDED',
+        primary: { DEFAULT: '#E31B6D', slate: '#B14E77' },
+        secondary: { DEFAULT: '#04C3C9', slate: '#52F9FF' },
       },
     },
   },
   variants: {
     extend: {
       rotate: ['group-hover'],
+      filter: ['focus', 'hover'],
     },
   },
   plugins: [],

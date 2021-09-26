@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutParagraph = () => {
   return (
-    <div className="max-w-sm text-justify font-body">
+    <div className="text-justify font-body">
       <p className="mb-4">
         Hi, I'm Yash! I'm currently studying{' '}
         <span className="text-secondary">
