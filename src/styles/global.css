@@ -44,16 +44,34 @@
     @apply ml-5 bg-gray-500;
   }
   .tab-list {
-    @apply relative flex p-0 m-0 overflow-x-auto list-none w-max sm:block;
+    @apply relative flex p-0 m-0 overflow-x-auto list-none w-max sm:block sm:overflow-visible;
   }
   .tab-button {
-    @apply flex items-center w-full px-5 pb-1 text-left bg-transparent border-b-2 h-11 whitespace-nowrap border-dark-light;
+    @apply flex items-center w-full px-5 pb-1 text-left bg-transparent border-b-2 h-11 whitespace-nowrap border-dark-light text-sm md:text-base;
+  }
+  .tab-panels {
+    @apply relative w-full mt-5 md:mt-0;
+  }
+  .tab-panel {
+    @apply h-auto leading-5 w-full px-2 py-1;
+  }
+  .jorr-list > ul {
+    @apply p-0 m-0 list-none text-gray-300 text-sm md:text-base;
+  }
+  .jorr-list > ul li {
+    @apply mb-4 relative pl-7;
+  }
+  .jorr-list > ul li::before {
+    content: '▹', @apply absolute left-0 text-secondary;
   }
 }
 
 @screen sm {
   .tab-button {
     @apply text-center border-b-0 border-l-2;
+  }
+  .tab-panels {
+    @apply ml-5;
   }
 }
 
