@@ -12,10 +12,6 @@ const About = () => {
         <AboutParagraph />
         <Photo />
       </div>
-      {/* <div className="flex flex-col flex-wrap items-center justify-center gap-12 md:flex-row">
-        <AboutParagraph />
-        <Photo />
-      </div> */}
     </Section>
   );
 };
