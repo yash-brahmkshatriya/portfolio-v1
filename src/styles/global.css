@@ -44,7 +44,7 @@
     @apply ml-5 bg-gray-500;
   }
   .tab-list {
-    @apply relative flex p-0 m-0 overflow-x-auto list-none w-max sm:block sm:overflow-visible;
+    @apply relative flex p-0 m-0 overflow-x-auto list-none w-full sm:w-max sm:block sm:overflow-visible;
   }
   .tab-button {
     @apply flex items-center w-full px-5 pb-1 text-left bg-transparent border-b-2 h-11 whitespace-nowrap border-dark-light text-sm md:text-base;
@@ -62,7 +62,8 @@
     @apply mb-4 relative pl-7;
   }
   .jorr-list > ul li::before {
-    content: '▹', @apply absolute left-0 text-secondary;
+    content: '▹';
+    @apply absolute left-0 text-secondary;
   }
 }
 

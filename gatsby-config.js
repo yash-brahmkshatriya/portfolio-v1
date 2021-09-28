@@ -7,7 +7,7 @@ module.exports = {
     title: 'Yash Brahmkshatriya',
     titleTemplate: '%s | Portfolio',
     description: 'Competitive Coder | Full Stack Web Developer',
-    image: '/images/yash.png',
+    image: '/images/dp.png',
   },
   plugins: [
     'gatsby-plugin-postcss',
