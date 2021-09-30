@@ -9,7 +9,7 @@
     height: 100px;
     display: block;
     content: '';
-    @apply bg-gray-300;
+    @apply bg-gray-400;
   }
   .typewriter > * {
     display: inline-block;
@@ -27,7 +27,7 @@
     border-width: 1px;
   }
   .social-icons {
-    @apply text-gray-300 lg:mb-4;
+    @apply text-gray-400 lg:mb-4;
   }
   .social-icon {
     @apply inline-block transition duration-200 ease-linear transform hover:-translate-y-1 hover:text-secondary focus:-translate-y-1 focus:text-secondary;
@@ -37,11 +37,11 @@
   }
   .after-h-line::after {
     width: 100%;
-    height: 2px;
+    height: 1px;
     display: block;
     content: '';
     position: relative;
-    @apply ml-5 bg-gray-500;
+    @apply ml-5 bg-gray-400;
   }
   .tab-list {
     @apply relative flex p-0 m-0 overflow-x-auto list-none w-full sm:w-max sm:block sm:overflow-visible;
@@ -50,10 +50,10 @@
     @apply flex items-center w-full px-5 pb-1 text-left bg-transparent border-b-2 h-11 whitespace-nowrap border-dark-light text-sm md:text-base;
   }
   .tab-panels {
-    @apply relative w-full mt-5 md:mt-0;
+    @apply relative w-full mt-8 md:mt-0;
   }
   .tab-panel {
-    @apply h-auto leading-5 w-full px-2 py-1;
+    @apply h-auto leading-5 w-full px-2 py-1 max-w-lg text-justify;
   }
   .jorr-list > ul {
     @apply p-0 m-0 list-none text-gray-300 text-sm md:text-base;

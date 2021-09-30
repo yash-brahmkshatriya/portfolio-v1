@@ -8,7 +8,7 @@ interface props {
 
 const Section = ({ className = '', children, id }: props) => {
   return (
-    <section className={`${className} container mx-auto md:px-7 px-5`} id={id}>
+    <section className={`${className} container`} id={id}>
       {children}
     </section>
   );

@@ -5,7 +5,10 @@ import Salutation from './Salutation';
 
 const Intro = () => {
   return (
-    <Section id="intro" className="grid items-center min-h-screen text-center">
+    <Section
+      id="intro"
+      className="grid items-center min-h-screen mx-auto text-center"
+    >
       <Salutation />
     </Section>
   );

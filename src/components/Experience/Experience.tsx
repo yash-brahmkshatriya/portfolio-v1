@@ -64,7 +64,7 @@ const Experience = () => {
   };
 
   return (
-    <Section id="experience" className="min-h-screen py-10">
+    <Section id="experience" className="min-h-screen py-10 sm:mx-20">
       <h2 className="section-heading after-h-line">My Experiences</h2>
       <div className="block sm:flex">
         <div
