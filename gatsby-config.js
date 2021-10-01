@@ -30,5 +30,12 @@ module.exports = {
         path: `${__dirname}/content/experience`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'projects',
+        path: `${__dirname}/content/projects`,
+      },
+    },
   ],
 };

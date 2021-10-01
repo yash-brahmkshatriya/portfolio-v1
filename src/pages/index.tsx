@@ -3,6 +3,7 @@ import About from '../components/About/About';
 import Experience from '../components/Experience/Experience';
 import Intro from '../components/Intro/Intro';
 import Layout from '../components/Layout';
+import Projects from '../components/Projects/Projects';
 import Seo from '../components/Seo';
 
 const IndexPage = () => {
@@ -12,6 +13,7 @@ const IndexPage = () => {
       <Intro />
       <About />
       <Experience />
+      <Projects />
     </Layout>
   );
 };
