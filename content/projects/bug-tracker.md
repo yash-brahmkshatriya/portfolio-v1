@@ -8,7 +8,7 @@ tech:
   - Material UI
   - MongoDB
   - Express
-featured: true
+featured: false
 showInProjects: false
 ---
 

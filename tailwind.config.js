@@ -16,7 +16,7 @@ module.exports = {
           // DEFAULT: '#171717',
         },
         primary: { DEFAULT: '#E31B6D', slate: '#B14E77' },
-        secondary: { DEFAULT: '#04C3C9', slate: '#52F9FF' },
+        secondary: { DEFAULT: '#04C3C9', slate: '#52F9FF', slate2: '#014446' },
       },
     },
   },

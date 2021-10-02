@@ -33,7 +33,7 @@
     @apply inline-block transition duration-200 ease-linear transform hover:-translate-y-1 hover:text-secondary focus:-translate-y-1 focus:text-secondary;
   }
   .section-heading {
-    @apply flex items-center mt-2 mb-10 text-3xl md:text-5xl lg:text-6xl font-display text-secondary whitespace-nowrap;
+    @apply flex items-center mt-2 mb-10 text-3xl md:text-5xl lg:text-6xl font-display text-primary whitespace-nowrap;
   }
   .after-h-line::after {
     width: 100%;
@@ -65,6 +65,18 @@
     content: '▹';
     @apply absolute left-0 text-secondary;
   }
+  .tech-list {
+    @apply flex justify-start flex-wrap list-none;
+  }
+  .tech-list-item {
+    @apply mr-5 leading-4 font-mono text-gray-400 mb-2 font-medium;
+  }
+  .project-links {
+    @apply flex flex-wrap;
+  }
+  .project-link {
+    @apply mr-4 text-gray-200 hover:text-secondary focus:text-secondary transition ease-linear;
+  }
 }
 
 @screen sm {
@@ -79,6 +91,12 @@
 @screen md {
   .after-h-line::after {
     width: 300px;
+  }
+}
+
+@screen lg {
+  .project-content {
+    grid-column: 1 / 9;
   }
 }
 
