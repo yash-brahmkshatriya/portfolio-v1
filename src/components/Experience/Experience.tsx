@@ -32,7 +32,6 @@ const Experience = () => {
     }
   `);
   const expData: Array<expType> = data.allMarkdownRemark.nodes;
-  console.log(expData[0].html);
   const [activeTabId, setActiveTabId] = useState(0);
   const [tabInFocus, setTabInFocus] = useState(null);
   const tabs = useRef([]);
@@ -66,9 +65,9 @@ const Experience = () => {
   return (
     <Section id="experience" className="min-h-screen py-20 sm:mx-10">
       <h2 className="section-heading after-h-line">My Experiences</h2>
-      <div className="sm:flex">
+      <div className="block sm:flex">
         <div
-          className="hidden tab-list"
+          className="tab-list"
           role="tablist"
           aria-label="Experience Tabs"
           onKeyDown={onKeyDown}

@@ -5,11 +5,15 @@ import VerticalSocials from './Socials/VerticalSocials';
 const Layout = ({ children }) => {
   return (
     <div id="root">
-      <main className="flex flex-col max-w-screen-xl min-h-screen px-6 mx-auto lg:px-36 md:px-24 sm:px-12">
+      <div className="flex flex-col min-h-screen">
         <VerticalSocials />
-        <div id="content">{children}</div>
+        <div id="content">
+          <main className="px-6 mx-auto lg:px-36 md:px-24 sm:px-12">
+            {children}
+          </main>
+        </div>
         <SideMail />
-      </main>
+      </div>
     </div>
   );
 };
