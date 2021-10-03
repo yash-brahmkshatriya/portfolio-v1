@@ -14,4 +14,5 @@ featured: true
 showInProjects: false
 ---
 
-Manage all your bills for your business at one place. Generate, view and download your bills anytime, anywhere. Version 2 under development. 👩‍💻
+Manage all your bills for your business at one place. Generate, view and download your bills anytime, anywhere.\
+Version 2 under development. 👩‍💻

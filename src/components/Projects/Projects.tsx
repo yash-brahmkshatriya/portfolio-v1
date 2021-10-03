@@ -37,7 +37,7 @@ const Projects = () => {
     (pr) => pr.frontmatter.featured
   );
   const projects: Array<projectType> = projectsData.filter(
-    (pr) => !pr.frontmatter.featured
+    (pr) => pr.frontmatter.showInProjects
   );
   return (
     <Section id="projects" className="max-w-4xl min-h-screen py-20 mx-auto">

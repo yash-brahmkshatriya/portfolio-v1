@@ -9,7 +9,7 @@ tech:
   - MongoDB
   - Express
 featured: false
-showInProjects: false
+showInProjects: true
 ---
 
-Manage all your bills for your business at one place. Generate, view and download your bills anytime, anywhere.
+Web application to track the bug threads of a project. Contributors can create a bug / feature report of an project. Project manager may assign type and severity to the thread. Discuss in the thread in comments. Developers work upon the thread and eventually can be closed by project manager.

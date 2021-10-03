@@ -11,4 +11,8 @@ featured: false
 showInProjects: true
 ---
 
-Automated login process to comeptitive platforms like codechef, codeforces, and atcoder using face recognition GUI built with Tkinter. And then, logging automatically into the website controlling browser using Selenium.
+Automated login process to comeptitive platforms like codechef, codeforces, and atcoder using face recognition GUI built with
+Tkinter.
+\
+\
+Login automatically into the website controlling browser using Selenium.

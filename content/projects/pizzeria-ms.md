@@ -14,4 +14,6 @@ showInProjects: true
 ---
 
 Web application to manage pizzeria / canteen. Order your food and wait for the order to arrive. Admins can manage cashiers, food items and their price.
+\
+\
 And remember, never say no to 🍕😋
