@@ -52,6 +52,8 @@ const Featured = ({ project, idx }: props) => {
                   href={repo}
                   aria-label="Repository Link"
                   className="project-link"
+                  target="_blank"
+                  rel="noopener"
                 >
                   <GitHub />
                 </a>
@@ -61,6 +63,8 @@ const Featured = ({ project, idx }: props) => {
                   href={external}
                   aria-label="External Link"
                   className="project-link"
+                  target="_blank"
+                  rel="noopener"
                 >
                   <ExternalLink />
                 </a>
