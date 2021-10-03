@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Section from '../Utils/Section';
 import Featured from './Featured';
 import { projectType } from './project';
+import OtherProject from './OtherProject';
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -41,9 +42,16 @@ const Projects = () => {
   return (
     <Section id="projects" className="max-w-4xl min-h-screen py-20 mx-auto">
       <h2 className="section-heading after-h-line">Things I've built</h2>
-      <ul>
+      <ul className="mb-10">
         {featured &&
           featured.map((pr, idx) => <Featured project={pr} idx={idx} />)}
+      </ul>
+      <h3 className="mb-12 text-xl font-medium text-center text-gray-200 mt-28 sm:text-3xl font-body">
+        Other Noteworthy Projects
+      </h3>
+      <ul className="grid grid-cols-2 gap-5">
+        {projects &&
+          projects.map((pr, idx) => <OtherProject project={pr} idx={idx} />)}
       </ul>
     </Section>
   );

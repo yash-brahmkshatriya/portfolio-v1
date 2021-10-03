@@ -19,50 +19,54 @@ const Featured = ({ project, idx }: props) => {
       className="relative grid mb-10 rounded shadow-lg"
     >
       <div
-        className="z-10 px-6 pt-6 pb-5"
+        className="z-10 px-6 pt-6 pb-5 group"
         style={{ gridColumn: '1 / -1', gridRow: '1 / -1' }}
       >
-        <div className="relative h-full">
-          <div className="mb-2 md:mb-3">
-            <h3 className="text-lg font-bold sm:text-xl md:text-2xl">
-              {title}
-            </h3>
-            {company && (
-              <h4 className="font-mono sm:text-lg md:text-xl text-secondary">{`@${company}`}</h4>
-            )}
-          </div>
-          <div
-            className="py-5 text-sm text-justify text-gray-300 sm:text-base"
-            dangerouslySetInnerHTML={{ __html: project.html }}
-          />
-          <ul className="my-3 tech-list">
-            {tech &&
-              tech.map((th, thid) => (
-                <li className="tech-list-item" key={`tech-${idx}=${thid}`}>
-                  {th}
-                </li>
-              ))}
-          </ul>
-          <div className="project-links">
-            {repo && (
-              <a
-                href={repo}
-                aria-label="Repository Link"
-                className="project-link"
-              >
-                <GitHub />
-              </a>
-            )}
-            {external && (
-              <a
-                href={external}
-                aria-label="External Link"
-                className="project-link"
-              >
-                <ExternalLink />
-              </a>
-            )}
-          </div>
+        <div className="relative flex flex-col items-start justify-between h-full">
+          <span>
+            <div className="mb-2 md:mb-3">
+              <h3 className="text-lg font-bold transition duration-100 ease-linear sm:text-xl md:text-2xl group-hover:text-secondary">
+                {title}
+              </h3>
+              {company && (
+                <h4 className="text-gray-300 md:text-lg">{`At, ${company}`}</h4>
+              )}
+            </div>
+            <div
+              className="py-5 text-sm text-justify text-gray-300 sm:text-base"
+              dangerouslySetInnerHTML={{ __html: project.html }}
+            />
+          </span>
+          <footer>
+            <ul className="my-3 tech-list">
+              {tech &&
+                tech.map((th, thid) => (
+                  <li className="tech-list-item" key={`tech-${idx}-${thid}`}>
+                    {th}
+                  </li>
+                ))}
+            </ul>
+            <div className="project-links">
+              {repo && (
+                <a
+                  href={repo}
+                  aria-label="Repository Link"
+                  className="project-link"
+                >
+                  <GitHub />
+                </a>
+              )}
+              {external && (
+                <a
+                  href={external}
+                  aria-label="External Link"
+                  className="project-link"
+                >
+                  <ExternalLink />
+                </a>
+              )}
+            </div>
+          </footer>
         </div>
       </div>
       <div

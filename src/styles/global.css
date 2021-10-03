@@ -33,7 +33,7 @@
     @apply inline-block transition duration-200 ease-linear transform hover:-translate-y-1 hover:text-secondary focus:-translate-y-1 focus:text-secondary;
   }
   .section-heading {
-    @apply flex items-center mt-2 mb-10 text-3xl md:text-5xl lg:text-6xl font-display text-primary whitespace-nowrap;
+    @apply flex items-center mt-2 mb-10 text-3xl md:text-5xl lg:text-6xl font-display text-secondary whitespace-nowrap;
   }
   .after-h-line::after {
     width: 100%;
@@ -69,7 +69,7 @@
     @apply flex justify-start flex-wrap list-none;
   }
   .tech-list-item {
-    @apply mr-5 leading-4 font-mono text-gray-400 mb-2 font-medium;
+    @apply mr-5 leading-4 text-gray-400 mb-2 font-medium;
   }
   .project-links {
     @apply flex flex-wrap;
@@ -127,4 +127,5 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1fr auto;
+  @apply font-body;
 }
