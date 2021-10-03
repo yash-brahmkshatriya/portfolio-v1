@@ -16,7 +16,7 @@ const Featured = ({ project, idx }: props) => {
   return (
     <li
       key={`featured-project-${idx}`}
-      className="relative grid max-w-2xl mb-10 rounded shadow md:shadow-lg"
+      className="relative grid mb-10 rounded shadow-lg"
     >
       <div
         className="z-10 px-6 pt-6 pb-5"
@@ -72,8 +72,8 @@ const Featured = ({ project, idx }: props) => {
         <GatsbyImage
           image={cover}
           alt={title}
-          className="h-full bg-secondary-slate"
-          imgClassName="object-cover w-auto filter grayscale contrast-100 brightness-50 mix-blend-multiply"
+          className="h-full sm:w-full bg-secondary-slate"
+          imgClassName="object-cover w-auto sm:h-auto filter grayscale contrast-100 brightness-50 mix-blend-multiply"
         />
       </div>
     </li>

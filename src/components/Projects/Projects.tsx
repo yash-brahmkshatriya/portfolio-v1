@@ -39,7 +39,7 @@ const Projects = () => {
     (pr) => !pr.frontmatter.featured
   );
   return (
-    <Section id="projects" className="min-h-screen py-20">
+    <Section id="projects" className="max-w-4xl min-h-screen py-20 mx-auto">
       <h2 className="section-heading after-h-line">Things I've built</h2>
       <ul>
         {featured &&
