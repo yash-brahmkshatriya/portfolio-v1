@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from '../Utils/Container';
 import Section from '../Utils/Section';
 import AboutParagraph from './AboutParagraph';
 import Photo from './Photo';
