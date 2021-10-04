@@ -46,7 +46,7 @@ const Projects = () => {
         {featured &&
           featured.map((pr, idx) => <Featured project={pr} idx={idx} />)}
       </ul>
-      <h3 className="mb-12 text-xl font-medium text-center text-gray-200 mt-28 sm:text-3xl font-body">
+      <h3 className="mb-12 text-xl font-medium text-center text-gray-200 mt-28 sm:text-3xl">
         Other Noteworthy Projects
       </h3>
       <ul className="grid grid-cols-2 gap-5">
