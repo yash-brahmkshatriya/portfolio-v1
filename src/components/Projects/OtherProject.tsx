@@ -14,7 +14,7 @@ const OtherProject = ({ project, idx }: props) => {
       key={`other-project-${idx}`}
       className="w-full h-full col-span-2 sm:col-span-1"
     >
-      <div className="flex flex-col items-start justify-between h-full p-5 transition duration-100 ease-linear transform rounded shadow-lg cursor-pointer group bg-dark-light hover:-translate-y-1">
+      <div className="flex flex-col items-start justify-between h-full p-5 transition duration-150 ease-linear transform rounded shadow-lg cursor-pointer group bg-dark-light hover:-translate-y-1">
         <header className="w-full">
           <div className="flex items-center justify-between w-full mb-4">
             <Folder size={40} className="text-secondary" />
@@ -43,7 +43,7 @@ const OtherProject = ({ project, idx }: props) => {
               )}
             </div>
           </div>
-          <h3 className="font-medium transition duration-100 ease-in sm:text-lg md:text-xl group-hover:text-secondary">
+          <h3 className="font-medium transition duration-150 ease-in sm:text-lg md:text-xl group-hover:text-secondary">
             {title}
           </h3>
           <div

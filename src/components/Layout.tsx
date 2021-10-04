@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './Footer/Footer';
 import SideMail from './Socials/SideMail';
 import VerticalSocials from './Socials/VerticalSocials';
 
@@ -11,6 +12,7 @@ const Layout = ({ children }) => {
           <main className="px-6 mx-auto lg:px-36 md:px-24 sm:px-12">
             {children}
           </main>
+          <Footer />
         </div>
         <SideMail />
       </div>

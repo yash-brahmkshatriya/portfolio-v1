@@ -25,7 +25,7 @@ const Featured = ({ project, idx }: props) => {
         <div className="relative flex flex-col items-start justify-between h-full">
           <span>
             <div className="mb-2 md:mb-3">
-              <h3 className="text-lg font-bold transition duration-100 ease-linear sm:text-xl md:text-2xl group-hover:text-secondary">
+              <h3 className="text-lg font-bold transition duration-150 ease-linear sm:text-xl md:text-2xl group-hover:text-secondary">
                 {title}
               </h3>
               {company && (

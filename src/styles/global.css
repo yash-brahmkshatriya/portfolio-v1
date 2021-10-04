@@ -7,7 +7,8 @@
   .sidebar::after {
     width: 1px;
     height: 100px;
-    display: block;
+    /* show for screen size > lg */
+    display: none;
     content: '';
     @apply bg-gray-400;
   }
@@ -20,9 +21,21 @@
       @apply text-secondary bg-dark-light bg-opacity-40;
     }
   }
+  @variants hover, focus, group-hover {
+    .footer-credits-glow {
+      outline: none;
+      @apply text-secondary;
+    }
+  }
 }
 
 @layer components {
+  .btn {
+    @apply rounded cursor-pointer px-7 py-3;
+  }
+  .btn-secondary-outline {
+    @apply text-secondary  border-secondary hover:bg-secondary-slate2 border-1 transition duration-150 ease-linear;
+  }
   .border-1 {
     border-width: 1px;
   }
@@ -30,10 +43,10 @@
     @apply text-gray-400 lg:mb-4;
   }
   .social-icon {
-    @apply inline-block transition duration-200 ease-linear transform hover:-translate-y-1 hover:text-secondary focus:-translate-y-1 focus:text-secondary;
+    @apply inline-block transition duration-150 ease-linear transform hover:-translate-y-1 hover:text-secondary focus:-translate-y-1 focus:text-secondary lg:mx-0 mx-2;
   }
   .section-heading {
-    @apply flex items-center mt-2 mb-10 text-2xl md:text-4xl lg:text-5xl font-display text-secondary whitespace-nowrap;
+    @apply flex items-center mt-2 mb-10 text-3xl md:text-5xl lg:text-6xl font-display text-secondary whitespace-nowrap;
   }
   .after-h-line::after {
     width: 100%;
@@ -77,6 +90,10 @@
   .project-link {
     @apply mr-4 text-gray-200 hover:text-secondary focus:text-secondary transition ease-linear;
   }
+  .footer-credits {
+    @apply text-gray-200;
+    @apply transition duration-150 ease-linear;
+  }
 }
 
 @screen sm {
@@ -98,6 +115,9 @@
   .project-content {
     grid-column: 1 / 9;
   }
+  .sidebar::after {
+    display: block;
+  }
 }
 
 html {
@@ -109,7 +129,6 @@ body {
   min-height: 100%;
   width: 100%;
   @apply bg-dark;
-  @apply text-gray-200;
 }
 body::-webkit-scrollbar {
   width: 12px;
@@ -127,5 +146,5 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1fr auto;
-  @apply font-body;
+  @apply font-body text-gray-200;
 }
