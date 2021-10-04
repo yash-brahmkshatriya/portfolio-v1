@@ -47,7 +47,7 @@ const OtherProject = ({ project, idx }: props) => {
             {title}
           </h3>
           <div
-            className="py-5 text-sm text-justify text-gray-300 sm:text-base"
+            className="py-5 text-sm text-justify text-gray-300"
             dangerouslySetInnerHTML={{ __html: project.html }}
           />
         </header>

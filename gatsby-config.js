@@ -17,6 +17,15 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'YashBrahmkshatriya',
+        short_name: 'YashBrahmkshatriya',
+        start_url: '/',
+        icon: 'src/images/logo.png',
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'content',
