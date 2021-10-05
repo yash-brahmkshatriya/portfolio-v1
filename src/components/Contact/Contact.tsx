@@ -12,10 +12,10 @@ const Contact = () => {
       style={{ minHeight: '480px' }}
     >
       <Fade bottom>
-        <h2 className="mt-2 mb-5 text-center text-secondary md:text-4xl lg:text-5xl font-display whitespace-nowrap">
+        <h2 className="mt-2 mb-5 text-3xl text-center text-secondary md:text-4xl lg:text-5xl font-display whitespace-nowrap">
           Get in Touch
         </h2>
-        <p className="py-2 mb-10">
+        <p className="py-2 mb-10 text-sm sm:text-base">
           Whether it's a job opportunity, a wish to work together, an invite to
           coffee, or feedback on my portfolio, my inbox is open !
         </p>

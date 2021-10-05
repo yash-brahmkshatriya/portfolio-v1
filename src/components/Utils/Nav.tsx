@@ -95,11 +95,13 @@ const Nav = () => {
             <Menu className="text-secondary" />
           </button>
           <span
-            className="fixed inset-0 z-30 hidden min-h-screen py-12 sm:hidden bg-dark nav-menu bg-opacity-90"
+            className="fixed inset-0 z-30 hidden min-h-screen py-12 bg-opacity-100 sm:hidden bg-dark nav-menu"
             style={{ width: '100vw' }}
           >
             <NavLinks />
-            <X className="mt-5" onClick={() => toggleNavMenu(false)} />
+            <Fade top delay={1200}>
+              <X className="mt-5" onClick={() => toggleNavMenu(false)} />
+            </Fade>
           </span>
         </nav>
       </div>
