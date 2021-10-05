@@ -5,11 +5,17 @@ interface props {
   children?: React.ReactNode;
   id?: string;
   style?: React.CSSProperties;
+  ref?: React.Ref<HTMLDivElement>;
 }
 
-const Section = ({ className = '', children, id, style }: props) => {
+const Section = ({ className = '', children, id, style, ref }: props) => {
   return (
-    <section className={`${className} container`} id={id} style={style}>
+    <section
+      className={`${className} container`}
+      id={id}
+      style={style}
+      ref={ref}
+    >
       {children}
     </section>
   );

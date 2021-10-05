@@ -101,7 +101,7 @@
     @apply items-center justify-between w-full h-full max-w-4xl mx-auto flex;
   }
   .nav-link {
-    @apply text-sm p-2 relative my-4 sm:mx-1 sm:my-0;
+    @apply p-2 relative my-4 sm:mx-1 sm:my-0;
   }
   .nav-link > a {
     @apply hover:text-secondary focus:text-secondary transition duration-150 ease-linear;
