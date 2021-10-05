@@ -5,12 +5,10 @@ import Experience from '../components/Experience/Experience';
 import Intro from '../components/Intro/Intro';
 import Layout from '../components/Layout';
 import Projects from '../components/Projects/Projects';
-import Seo from '../components/Seo';
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Seo />
       <Intro />
       <About />
       <Experience />
