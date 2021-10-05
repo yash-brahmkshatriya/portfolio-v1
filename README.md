@@ -1,54 +1,64 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby minimal starter
-</h1>
+<div align="center">
+  <img alt="logo" src="https://raw.githubusercontent.com/yash-brahmkshatriya/portfolio-v1/main/src/images/logo.png" width="100">
+</div>
 
-## 🚀 Quick start
+## 👨‍💻 Portfolio V1.0
 
-1.  **Create a Gatsby site.**
+My first portfolio built with [Tailwind CSS](https://tailwindcss.com/) and [Gatsby](https://www.gatsbyjs.com/) , and deployed on [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/).
+\
+\
+Best try has been made to achieve high performance and SEO, alongwith a cleaner code.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## 💼 Prerequisites
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+- [Node.js](https://nodejs.org/en/download/)
+- Yarn or npm
 
-2.  **Start developing.**
+## 🛠 Installation & Set Up
 
-    Navigate into your new site’s directory and start it up.
+1. Clone the latest code on the master branch
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+2. Install the Gatsby CLI
 
-3.  **Open the code and start customizing!**
+```sh
+npm install -g gatsby-cli
+```
 
-    Your site is now running at http://localhost:8000!
+3. Install dependencies
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+```sh
+npm install
+```
 
-4.  **Learn more**
+4. Start the development server
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```sh
+npm start
+```
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## 🎈 Usage
 
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+Navigate to http://localhost:8000 on your browser
 
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## 🚀 Build and Run for Production
 
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+1. Generate production build
 
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+```sh
+npm run build
+```
 
-## 🚀 Quick start (Gatsby Cloud)
+2. Preview the production build
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+```sh
+npm run serve
+```
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+## 📗 Acknowledgements
+
+The design and feel of the site was heavily influenced by awesome porfolios such as:
+
+- [Brittany Chiang](https://brittanychiang.com/)
+- [Jarrod Servilla](https://portfolio-gt1hrkn9f-jcserv.vercel.app/)
+- [Jacek Jeznach](https://jacekjeznach.com/)
+- [Mathew Williams](http://findmatthew.com/)

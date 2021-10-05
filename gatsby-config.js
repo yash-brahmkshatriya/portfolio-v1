@@ -1,5 +1,7 @@
 const isDevEnv = process.env.NODE_ENV === 'development';
-const siteUrl = isDevEnv ? 'http://localhost:8000' : '';
+const siteUrl = isDevEnv
+  ? 'http://localhost:8000'
+  : 'https://yashb.gatsbyjs.io';
 
 module.exports = {
   siteMetadata: {
