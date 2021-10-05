@@ -15,23 +15,4 @@ export default {
       url: 'https://www.instagram.com/yash_brahmkshatriya/',
     },
   ],
-
-  navLinks: [
-    {
-      name: 'Home',
-      url: '/#intro',
-    },
-    {
-      name: 'About',
-      url: '/#about',
-    },
-    {
-      name: 'Work',
-      url: '/#work',
-    },
-    {
-      name: 'Skills',
-      url: '/#skills',
-    },
-  ],
 };

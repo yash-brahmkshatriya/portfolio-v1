@@ -1,7 +1,8 @@
 import React from 'react';
-import Footer from './Footer/Footer';
+import Footer from './Utils/Footer';
 import SideMail from './Socials/SideMail';
 import VerticalSocials from './Socials/VerticalSocials';
+import Nav from './Utils/Nav';
 
 const Layout = ({ children }) => {
   return (
@@ -9,6 +10,7 @@ const Layout = ({ children }) => {
       <div className="flex flex-col min-h-screen">
         <VerticalSocials />
         <div id="content">
+          <Nav />
           <main className="px-6 mx-auto lg:px-36 md:px-24 sm:px-12">
             {children}
           </main>

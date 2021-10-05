@@ -33,6 +33,9 @@
   .btn {
     @apply rounded cursor-pointer px-7 py-3;
   }
+  .btn-small {
+    @apply px-4 py-2;
+  }
   .btn-secondary-outline {
     @apply text-secondary  border-secondary hover:bg-secondary-slate2 border-1 transition duration-150 ease-linear;
   }
@@ -93,6 +96,12 @@
   .footer-credits {
     @apply text-gray-200;
     @apply transition duration-150 ease-linear;
+  }
+  .nav-links {
+    @apply items-center justify-between hidden w-full h-full max-w-4xl mx-auto md:flex;
+  }
+  .nav-link {
+    @apply text-sm p-2 relative mx-2 hover:text-secondary focus:text-secondary transition duration-150 ease-linear;
   }
 }
 
