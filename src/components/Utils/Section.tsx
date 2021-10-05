@@ -1,24 +1,18 @@
 import React from 'react';
 
-interface props {
-  className?: string;
-  children?: React.ReactNode;
-  id?: string;
-  style?: React.CSSProperties;
-  ref?: React.Ref<HTMLDivElement>;
-}
+type SectionProps = React.HTMLProps<HTMLDivElement>;
 
-const Section = ({ className = '', children, id, style, ref }: props) => {
-  return (
+const Section = React.forwardRef<HTMLDivElement, SectionProps>(
+  ({ className, id, style, children, ...rest }, ref) => (
     <section
       className={`${className} container`}
       id={id}
       style={style}
       ref={ref}
+      {...rest}
     >
       {children}
     </section>
-  );
-};
-
+  )
+);
 export default Section;

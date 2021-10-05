@@ -1,6 +1,7 @@
 import React from 'react';
 import Section from '../Utils/Section';
 import Salutation from './Salutation';
+import Fade from 'react-reveal/Fade';
 
 const Intro = () => {
   return (
@@ -8,7 +9,9 @@ const Intro = () => {
       id="intro"
       className="grid items-center min-h-screen mx-auto text-center"
     >
-      <Salutation />
+      <Fade delay={1700}>
+        <Salutation />
+      </Fade>
     </Section>
   );
 };

@@ -31,13 +31,19 @@
 
 @layer components {
   .btn {
-    @apply rounded cursor-pointer px-7 py-3;
+    @apply rounded cursor-pointer sm:px-7 sm:py-3 px-4 py-2;
   }
   .btn-small {
     @apply px-4 py-2;
   }
   .btn-secondary-outline {
     @apply text-secondary  border-secondary hover:bg-secondary-slate2 border-1 transition duration-150 ease-linear;
+  }
+  .intro-name {
+    @apply cursor-default text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+  .typewriter {
+    @apply cursor-default text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl;
   }
   .border-1 {
     border-width: 1px;

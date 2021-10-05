@@ -2,31 +2,42 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React, { useEffect } from 'react';
 import { Menu, X } from 'react-feather';
+import Fade from 'react-reveal/Fade';
 
 const NavLinks = () => (
   <ul className="flex flex-col items-center list-none font-heading sm:flex-row">
-    <li className="nav-link">
-      <Link to="/#about">About</Link>
-    </li>
-    <li className="nav-link">
-      <Link to="/#experience">Experience</Link>
-    </li>
-    <li className="nav-link">
-      <Link to="/#projects">Projects</Link>
-    </li>
-    <li className="nav-link">
-      <Link to="/#contact">Contact Me</Link>
-    </li>
-    <li className="nav-link">
-      <a
-        className="btn btn-small btn-secondary-outline"
-        target="_blank"
-        href="/resume.pdf"
-        rel="noopener noreferrer"
-      >
-        Resume
-      </a>
-    </li>
+    <Fade top delay={200}>
+      <li className="nav-link">
+        <Link to="/#about">About</Link>
+      </li>
+    </Fade>
+    <Fade top delay={400}>
+      <li className="nav-link">
+        <Link to="/#experience">Experience</Link>
+      </li>
+    </Fade>
+    <Fade top delay={600}>
+      <li className="nav-link">
+        <Link to="/#projects">Projects</Link>
+      </li>
+    </Fade>
+    <Fade top delay={800}>
+      <li className="nav-link">
+        <Link to="/#contact">Contact Me</Link>
+      </li>
+    </Fade>
+    <Fade top delay={1000}>
+      <li className="nav-link">
+        <a
+          className="btn btn-small btn-secondary-outline"
+          target="_blank"
+          href="/resume.pdf"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
+      </li>
+    </Fade>
   </ul>
 );
 
@@ -70,7 +81,9 @@ const Nav = () => {
       id="header-nav"
     >
       <div className="nav-links">
-        <StaticImage src="../../images/logo.png" alt="Logo" width={50} />
+        <Fade top>
+          <StaticImage src="../../images/logo.png" alt="Logo" width={50} />
+        </Fade>
         <nav className="relative">
           <span className="hidden sm:block">
             <NavLinks />
