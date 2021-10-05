@@ -1,6 +1,6 @@
 ---
 date: '2021-05-31'
-title: 'Technical Analyst'
+title: 'Technical Analyst Intern'
 company: 'Deutsche Bank'
 location: 'Pune, India'
 range: 'May - July, 2021'

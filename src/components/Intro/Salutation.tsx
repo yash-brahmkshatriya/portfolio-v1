@@ -7,7 +7,7 @@ const Salutation = () => {
   const typeWriterOptions: Partial<Options> = {
     loop: true,
     autoStart: true,
-    strings: ['Web Developer', 'Competitive Coder'],
+    strings: ['full stack developer', 'competitive coder'],
     cursor: '_',
   };
   return (
@@ -18,7 +18,7 @@ const Salutation = () => {
           <span className="font-bold text-primary">Yash Brahmkshatriya</span>
         </h1>
         <h1 className="mb-1 typewriter">
-          I'm <Typewriter options={typeWriterOptions} />
+          A <Typewriter options={typeWriterOptions} />
         </h1>
       </div>
 

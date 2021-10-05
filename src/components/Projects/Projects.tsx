@@ -44,18 +44,28 @@ const Projects = () => {
     <Section id="projects" className="max-w-4xl min-h-screen py-20 mx-auto">
       <Fade bottom>
         <h2 className="section-heading after-h-line">Things I've built</h2>
-        <ul className="mb-10">
-          {featured &&
-            featured.map((pr, idx) => <Featured project={pr} idx={idx} />)}
-        </ul>
+      </Fade>
+      <ul className="mb-10">
+        {featured &&
+          featured.map((pr, idx) => (
+            <Fade bottom>
+              <Featured project={pr} idx={idx} />
+            </Fade>
+          ))}
+      </ul>
+      <Fade bottom>
         <h3 className="mb-12 text-xl font-medium text-center text-gray-200 mt-28 sm:text-3xl">
           Other Noteworthy Projects
         </h3>
-        <ul className="grid grid-cols-2 gap-5">
-          {projects &&
-            projects.map((pr, idx) => <OtherProject project={pr} idx={idx} />)}
-        </ul>
       </Fade>
+      <ul className="grid grid-cols-2 gap-5">
+        {projects &&
+          projects.map((pr, idx) => (
+            <Fade bottom>
+              <OtherProject project={pr} idx={idx} />
+            </Fade>
+          ))}
+      </ul>
     </Section>
   );
 };

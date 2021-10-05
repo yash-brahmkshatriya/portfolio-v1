@@ -9,7 +9,7 @@ const Intro = () => {
       id="intro"
       className="grid items-center min-h-screen mx-auto text-center"
     >
-      <Fade delay={1700}>
+      <Fade delay={1000}>
         <Salutation />
       </Fade>
     </Section>

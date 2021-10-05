@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutParagraph = () => {
   return (
-    <div className="text-justify font-body">
+    <div className="text-sm text-justify font-body sm:text-base">
       <p className="mb-4">
         Hi, I'm Yash! I'm currently studying{' '}
         <span className="text-secondary">

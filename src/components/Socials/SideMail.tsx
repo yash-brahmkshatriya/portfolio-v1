@@ -5,7 +5,7 @@ import Bounce from 'react-reveal/Bounce';
 const SideMail = () => {
   return (
     <div className="fixed bottom-0 right-0 z-10 hidden w-20 lg:block">
-      <Bounce bottom delay={2500}>
+      <Bounce bottom delay={1500}>
         <p className="sidebar font-heading">
           <a
             href={`mailto:${config.email}`}

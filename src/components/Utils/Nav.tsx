@@ -6,27 +6,27 @@ import Fade from 'react-reveal/Fade';
 
 const NavLinks = () => (
   <ul className="flex flex-col items-center list-none font-heading sm:flex-row">
-    <Fade top delay={200}>
+    <Fade top delay={100}>
       <li className="nav-link">
         <Link to="/#about">About</Link>
       </li>
     </Fade>
-    <Fade top delay={400}>
+    <Fade top delay={200}>
       <li className="nav-link">
         <Link to="/#experience">Experience</Link>
       </li>
     </Fade>
-    <Fade top delay={600}>
+    <Fade top delay={300}>
       <li className="nav-link">
         <Link to="/#projects">Projects</Link>
       </li>
     </Fade>
-    <Fade top delay={800}>
+    <Fade top delay={400}>
       <li className="nav-link">
         <Link to="/#contact">Contact Me</Link>
       </li>
     </Fade>
-    <Fade top delay={1000}>
+    <Fade top delay={500}>
       <li className="nav-link">
         <a
           className="btn btn-small btn-secondary-outline"
@@ -88,18 +88,20 @@ const Nav = () => {
           <span className="hidden sm:block">
             <NavLinks />
           </span>
-          <button
-            className="block sm:hidden"
-            onClick={() => toggleNavMenu(true)}
-          >
-            <Menu className="text-secondary" />
-          </button>
+          <Fade top delay={100}>
+            <button
+              className="block sm:hidden"
+              onClick={() => toggleNavMenu(true)}
+            >
+              <Menu className="text-secondary" />
+            </button>
+          </Fade>
           <span
             className="fixed inset-0 z-30 hidden min-h-screen py-12 bg-opacity-100 sm:hidden bg-dark nav-menu"
             style={{ width: '100vw' }}
           >
             <NavLinks />
-            <Fade top delay={1200}>
+            <Fade top delay={600}>
               <X className="mt-5" onClick={() => toggleNavMenu(false)} />
             </Fade>
           </span>
