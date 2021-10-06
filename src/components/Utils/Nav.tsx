@@ -76,7 +76,7 @@ const Nav = () => {
 
   return (
     <header
-      className="fixed top-0 z-20 w-full px-8 md:px-12 bg-opacity-90 bg-dark backdrop-filter backdrop-blur-lg filter-none"
+      className="fixed top-0 z-20 w-full px-8 md:px-12 bg-opacity-90 bg-dark backdrop-filter backdrop-blur-md filter-none"
       style={{ height: '70px' }}
       id="header-nav"
     >
@@ -95,7 +95,7 @@ const Nav = () => {
             />
           </Fade>
           <span
-            className="fixed inset-0 z-30 hidden min-h-screen py-12 bg-opacity-100 sm:hidden bg-dark nav-menu"
+            className="fixed inset-0 z-30 hidden min-h-screen py-12 bg-opacity-90 sm:hidden bg-dark nav-menu backdrop-filter backdrop-blur-lg"
             style={{ width: '100vw' }}
           >
             <NavLinks />

@@ -36,6 +36,10 @@ const Seo = () => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <link rel="icon" href="../images/gatsby-icon.ico" />
+      <meta
+        name="google-site-verification"
+        content="E1-JaP5hm5_cK1ozAzEdl-352TaKNqMu6rijM5Wa-Xo"
+      />
       {seo.url && <meta property="og:url" content={seo.url} />}
 
       {seo.title && <meta property="og:title" content={seo.title} />}
