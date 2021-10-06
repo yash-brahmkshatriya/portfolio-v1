@@ -18,6 +18,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
+    `gatsby-plugin-robots-txt`,
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

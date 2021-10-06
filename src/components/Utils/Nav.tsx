@@ -89,12 +89,10 @@ const Nav = () => {
             <NavLinks />
           </span>
           <Fade top delay={100}>
-            <button
-              className="block sm:hidden"
+            <Menu
+              className="block text-secondary sm:hidden"
               onClick={() => toggleNavMenu(true)}
-            >
-              <Menu className="text-secondary" />
-            </button>
+            />
           </Fade>
           <span
             className="fixed inset-0 z-30 hidden min-h-screen py-12 bg-opacity-100 sm:hidden bg-dark nav-menu"

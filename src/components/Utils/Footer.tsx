@@ -29,6 +29,7 @@ const Footer = () => {
         href="https://github.com/yash-brahmkshatriya/portfolio-v1"
         target="_blank"
         className="p-2 group footer-credits hover:footer-credits-glow"
+        rel="nooopener"
       >
         <p className="text-sm lg:text-base">
           Made with ❤ by Yash Brahmkshatriya

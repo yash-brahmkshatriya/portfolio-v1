@@ -108,10 +108,10 @@ const Experience = () => {
                     aria-hidden={!isActive}
                     hidden={!isActive}
                   >
-                    <h4 className="mb-1 text-lg font-medium leading-5 md:text-xl">
+                    <h3 className="mb-1 text-lg font-medium leading-5 md:text-xl">
                       <span>{title}</span>{' '}
                       <span className="text-secondary">@ {company}</span>
-                    </h4>
+                    </h3>
                     <p className="mb-6 font-mono text-xs text-gray-400">
                       {range}
                     </p>

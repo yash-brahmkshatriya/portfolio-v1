@@ -47,11 +47,7 @@ const Projects = () => {
       </Fade>
       <ul className="mb-10">
         {featured &&
-          featured.map((pr, idx) => (
-            <Fade bottom>
-              <Featured project={pr} idx={idx} />
-            </Fade>
-          ))}
+          featured.map((pr, idx) => <Featured project={pr} idx={idx} />)}
       </ul>
       <Fade bottom>
         <h3 className="mb-12 text-xl font-medium text-center text-gray-200 mt-28 sm:text-3xl">
@@ -60,11 +56,7 @@ const Projects = () => {
       </Fade>
       <ul className="grid grid-cols-2 gap-5">
         {projects &&
-          projects.map((pr, idx) => (
-            <Fade bottom>
-              <OtherProject project={pr} idx={idx} />
-            </Fade>
-          ))}
+          projects.map((pr, idx) => <OtherProject project={pr} idx={idx} />)}
       </ul>
     </Section>
   );

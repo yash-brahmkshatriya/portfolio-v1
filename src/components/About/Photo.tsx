@@ -10,7 +10,7 @@ const Photo = () => {
           alt="It's My Picture"
           placeholder="blurred"
           imgClassName="relative rounded filter grayscale transition ease-linear duration-150 contrast-100 hover:filter-none mix-blend-multiply hover:mix-blend-normal"
-          quality={95}
+          quality={80}
           width={500}
         />
       </div>

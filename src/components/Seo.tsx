@@ -32,6 +32,7 @@ const Seo = () => {
 
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
+      <html lang="en" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <link rel="icon" href="../images/gatsby-icon.ico" />
