@@ -22,6 +22,7 @@ const Projects = () => {
             tech
             title
             company
+            repoPrivate
             coverImg {
               childImageSharp {
                 gatsbyImageData(width: 700, placeholder: BLURRED, formats: AUTO)

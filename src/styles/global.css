@@ -91,7 +91,7 @@
     @apply flex justify-start flex-wrap list-none;
   }
   .tech-list-item {
-    @apply mr-5 leading-4 text-gray-400 mb-2 font-medium;
+    @apply mr-5 leading-4 text-gray-400 mb-2 font-medium text-sm sm:text-base;
   }
   .project-links {
     @apply flex flex-wrap;
@@ -111,6 +111,12 @@
   }
   .nav-link > a {
     @apply hover:text-secondary focus:text-secondary transition duration-150 ease-linear;
+  }
+  .trans-img-container {
+    @apply transition duration-150 ease-linear bg-secondary-slate hover:bg-transparent focus:bg-transparent;
+  }
+  .trans-img {
+    @apply filter grayscale transition ease-linear duration-150 contrast-100 mix-blend-multiply brightness-50 hover:mix-blend-normal focus:mix-blend-normal hover:filter-none focus:filter-none;
   }
 }
 

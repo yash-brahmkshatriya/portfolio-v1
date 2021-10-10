@@ -3,6 +3,7 @@ date: '2021-07-19'
 title: 'Ideabox'
 company: 'Deutsche Bank'
 repo: 'https://github.com/yash-brahmkshatriya/ideabox'
+repoPrivate: true
 external: ''
 coverImg: './images/ideabox.png'
 tech:

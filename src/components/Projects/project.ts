@@ -5,6 +5,7 @@ export interface projectType {
     title: string;
     company?: string;
     repo?: string;
+    repoPrivate?: boolean;
     external?: string;
     tech?: Array<string>;
     featured: boolean;

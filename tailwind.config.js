@@ -37,6 +37,8 @@ module.exports = {
     extend: {
       rotate: ['group-hover'],
       filter: ['focus', 'hover'],
+      mixBlendMode: ['focus', 'hover'],
+      transitionDuration: ['hover', 'focus'],
     },
   },
   plugins: [],

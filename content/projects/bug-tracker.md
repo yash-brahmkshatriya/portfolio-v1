@@ -2,6 +2,7 @@
 date: '2021-03-12'
 title: 'Bug Tracker'
 repo: 'https://github.com/yash-brahmkshatriya/bug-tracker'
+repoPrivate: true
 external: ''
 tech:
   - React

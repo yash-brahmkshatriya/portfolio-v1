@@ -4,38 +4,34 @@ import React, { useEffect } from 'react';
 import { Menu, X } from 'react-feather';
 import Fade from 'react-reveal/Fade';
 
-const NavLinks = () => (
+const NavLinks = ({ closeMenu }) => (
   <ul className="flex flex-col items-center list-none font-heading sm:flex-row">
     <Fade top delay={100}>
       <li className="nav-link">
-        <Link to="/#about">About</Link>
+        <Link to="/#about" onClick={closeMenu}>
+          About
+        </Link>
       </li>
     </Fade>
     <Fade top delay={200}>
       <li className="nav-link">
-        <Link to="/#experience">Experience</Link>
+        <Link to="/#experience" onClick={closeMenu}>
+          Experience
+        </Link>
       </li>
     </Fade>
     <Fade top delay={300}>
       <li className="nav-link">
-        <Link to="/#projects">Projects</Link>
+        <Link to="/#projects" onClick={closeMenu}>
+          Projects
+        </Link>
       </li>
     </Fade>
     <Fade top delay={400}>
       <li className="nav-link">
-        <Link to="/#contact">Contact Me</Link>
-      </li>
-    </Fade>
-    <Fade top delay={500}>
-      <li className="nav-link">
-        <a
-          className="btn btn-small btn-secondary-outline"
-          target="_blank"
-          href="/resume.pdf"
-          rel="noopener noreferrer"
-        >
-          Resume
-        </a>
+        <Link to="/#contact" onClick={closeMenu}>
+          Contact Me
+        </Link>
       </li>
     </Fade>
   </ul>
@@ -62,6 +58,7 @@ const Nav = () => {
 
   const toggleNavMenu = (open: boolean) => {
     const menu = document.querySelector('.nav-menu');
+    if (!menu) return;
     const classes = ['flex', 'flex-col', 'justify-center', 'items-center'];
     if (open) {
       menu.classList.remove('hidden');
@@ -74,33 +71,41 @@ const Nav = () => {
     }
   };
 
+  const closeMenu = () => toggleNavMenu(false);
+  const openMenu = () => toggleNavMenu(true);
+
   return (
     <header
-      className="fixed top-0 z-20 w-full px-8 md:px-12 bg-opacity-90 bg-dark backdrop-filter backdrop-blur-md filter-none"
+      className="fixed top-0 z-20 w-full px-8 md:px-12 bg-opacity-90 bg-dark backdrop-filter backdrop-blur-lg filter-none"
       style={{ height: '70px' }}
       id="header-nav"
     >
       <div className="nav-links">
         <Fade top>
-          <StaticImage src="../../images/logo.png" alt="Logo" width={50} />
+          <StaticImage
+            src="../../images/logo.png"
+            alt="Logo"
+            width={50}
+            placeholder="none"
+          />
         </Fade>
         <nav className="relative">
           <span className="hidden sm:block">
-            <NavLinks />
+            <NavLinks closeMenu={closeMenu} />
           </span>
           <Fade top delay={100}>
             <Menu
               className="block text-secondary sm:hidden"
-              onClick={() => toggleNavMenu(true)}
+              onClick={openMenu}
             />
           </Fade>
           <span
-            className="fixed inset-0 z-30 hidden min-h-screen py-12 bg-opacity-90 sm:hidden bg-dark nav-menu backdrop-filter backdrop-blur-lg"
+            className="fixed inset-0 z-30 hidden min-h-screen py-12 bg-opacity-90 sm:hidden bg-dark nav-menu backdrop-filter backdrop-blur filter-none"
             style={{ width: '100vw' }}
           >
-            <NavLinks />
+            <NavLinks closeMenu={closeMenu} />
             <Fade top delay={600}>
-              <X className="mt-5" onClick={() => toggleNavMenu(false)} />
+              <X className="mt-5" onClick={closeMenu} />
             </Fade>
           </span>
         </nav>

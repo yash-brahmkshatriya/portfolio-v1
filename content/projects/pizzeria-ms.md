@@ -2,6 +2,7 @@
 date: '2020-03-16'
 title: 'Pizzeria Management System'
 repo: 'https://github.com/yash-brahmkshatriya/Pizzeria-Management-System/'
+repoPrivate: false
 external: ''
 tech:
   - Express

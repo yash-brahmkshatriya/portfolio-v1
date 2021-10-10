@@ -10,20 +10,27 @@ interface props {
 }
 
 const Featured = ({ project, idx }: props) => {
-  const { title, external, company, repo, coverImg, tech } =
+  const { title, external, company, repo, coverImg, tech, repoPrivate } =
     project.frontmatter;
   const cover = coverImg === null ? null : getImage(coverImg);
 
   return (
     <li
       key={`featured-project-${idx}`}
-      className="relative grid mb-10 rounded shadow-lg"
+      className={`relative mb-10 rounded shadow-lg flex flex-col overflow-hidden ${
+        idx % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+      }`}
     >
       <Fade bottom>
-        <div
-          className="z-10 px-6 pt-6 pb-5 group"
-          style={{ gridColumn: '1 / -1', gridRow: '1 / -1' }}
-        >
+        <div className="relative flex-1 trans-img-container">
+          <GatsbyImage
+            image={cover}
+            alt={title}
+            className="h-full sm:w-full"
+            imgClassName="object-cover w-auto sm:h-auto trans-img"
+          />
+        </div>
+        <div className="z-10 flex-1 px-6 pt-6 pb-5 bg-opacity-50 group backdrop-filter backdrop-blur-sm bg-dark-light">
           <div className="relative flex flex-col items-start justify-between h-full">
             <span>
               <div className="mb-2 md:mb-3">
@@ -49,7 +56,7 @@ const Featured = ({ project, idx }: props) => {
                   ))}
               </ul>
               <div className="project-links">
-                {repo && (
+                {repo && !repoPrivate && (
                   <a
                     href={repo}
                     aria-label="Repository Link"
@@ -74,17 +81,6 @@ const Featured = ({ project, idx }: props) => {
               </div>
             </footer>
           </div>
-        </div>
-        <div
-          className="relative opacity-20"
-          style={{ gridColumn: '1 / -1', gridRow: '1 / -1' }}
-        >
-          <GatsbyImage
-            image={cover}
-            alt={title}
-            className="h-full sm:w-full bg-secondary-slate"
-            imgClassName="object-cover w-auto sm:h-auto filter grayscale contrast-100 brightness-50 mix-blend-multiply"
-          />
         </div>
       </Fade>
     </li>

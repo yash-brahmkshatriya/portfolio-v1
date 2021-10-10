@@ -2,6 +2,7 @@
 date: '2020-04-20'
 title: 'Login Automation'
 repo: 'https://github.com/yash-brahmkshatriya/Login-Automation/'
+repoPrivate: false
 external: ''
 tech:
   - Python

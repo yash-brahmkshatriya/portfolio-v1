@@ -9,7 +9,7 @@ interface props {
 }
 
 const OtherProject = ({ project, idx }: props) => {
-  const { repo, title, external, tech } = project.frontmatter;
+  const { repo, title, external, tech, repoPrivate } = project.frontmatter;
   return (
     <li
       key={`other-project-${idx}`}
@@ -21,13 +21,13 @@ const OtherProject = ({ project, idx }: props) => {
             <div className="flex items-center justify-between w-full mb-4">
               <Folder size={40} className="text-secondary" />
               <div className="project-links">
-                {repo && (
+                {repo && !repoPrivate && (
                   <a
                     href={repo}
                     aria-label="Repository Link"
                     className="project-link"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                   >
                     <GitHub size={20} />
                   </a>
@@ -38,7 +38,7 @@ const OtherProject = ({ project, idx }: props) => {
                     aria-label="External Link"
                     className="project-link"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                   >
                     <ExternalLink size={20} />
                   </a>
