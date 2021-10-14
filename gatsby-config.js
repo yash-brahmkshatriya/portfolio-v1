@@ -3,13 +3,15 @@ const siteUrl = isDevEnv
   ? 'http://localhost:8000'
   : 'https://yashb.gatsbyjs.io';
 
+const description =
+  'Full stack developer, competitive coder, and VSCode lover 😜';
 module.exports = {
   siteMetadata: {
     siteUrl: siteUrl,
     title: 'Yash Brahmkshatriya',
     titleTemplate: '%s | Portfolio',
-    description: 'Competitive Coder | Full Stack Web Developer',
-    image: 'src/images/logo.png',
+    description,
+    image: '/logo.png',
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -25,8 +27,11 @@ module.exports = {
       options: {
         name: 'YashBrahmkshatriya',
         short_name: 'YashBrahmkshatriya',
+        description,
         start_url: '/',
         icon: 'src/images/logo.png',
+        theme_color: '#04C3C9',
+        background_color: '#1B212C',
       },
     },
     {
