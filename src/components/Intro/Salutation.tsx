@@ -23,14 +23,12 @@ const Salutation = () => {
       </div>
 
       <div className="mt-10">
-        <Link to="/#about">
-          <button
-            className="text-sm md:text-base lg:text-lg btn btn-secondary-outline group"
-            type="button"
-          >
-            Know More
-            <ArrowRight className="inline-block ml-3 text-xl transition duration-150 transform group-hover:rotate-90" />
-          </button>
+        <Link
+          to="/#about"
+          className="text-sm md:text-base lg:text-lg btn btn-secondary-outline group"
+        >
+          Know More
+          <ArrowRight className="inline-block ml-3 text-xl transition duration-150 transform group-hover:rotate-90" />
         </Link>
       </div>
     </div>

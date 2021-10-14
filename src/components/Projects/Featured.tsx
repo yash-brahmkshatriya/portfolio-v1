@@ -22,7 +22,7 @@ const Featured = ({ project, idx }: props) => {
       }`}
     >
       <Fade bottom>
-        <div className="relative flex-1 trans-img-container">
+        <div className="relative trans-img-container" style={{ flex: 3 }}>
           <GatsbyImage
             image={cover}
             alt={title}
@@ -30,7 +30,10 @@ const Featured = ({ project, idx }: props) => {
             imgClassName="object-cover w-auto sm:h-auto trans-img"
           />
         </div>
-        <div className="z-10 flex-1 px-6 pt-6 pb-5 bg-opacity-50 group backdrop-filter backdrop-blur-sm bg-dark-light">
+        <div
+          className="z-10 px-6 pt-6 pb-5 group bg-dark-light"
+          style={{ flex: 5 }}
+        >
           <div className="relative flex flex-col items-start justify-between h-full">
             <span>
               <div className="mb-2 md:mb-3">
