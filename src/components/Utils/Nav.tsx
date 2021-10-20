@@ -124,7 +124,7 @@ const Nav = () => {
         </div>
       </header>
       <span
-        className="fixed inset-0 z-30 hidden h-full bg-opacity-90 sm:hidden bg-dark nav-menu backdrop-filter backdrop-blur filter-none"
+        className="fixed inset-0 z-30 hidden h-full bg-opacity-80 sm:hidden bg-dark nav-menu backdrop-filter backdrop-blur filter-none"
         style={{
           width: '100vw',
           transform: `translate(0,${navHeight})`,
