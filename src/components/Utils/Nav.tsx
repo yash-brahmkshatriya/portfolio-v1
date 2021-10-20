@@ -38,6 +38,7 @@ const NavLinks = ({ closeMenu }) => (
 );
 
 const Nav = () => {
+  const navHeight = '70px';
   useEffect(() => {
     const navHeader = document.querySelector('#header-nav');
     function isScrolledDown(): boolean {
@@ -50,24 +51,37 @@ const Nav = () => {
         navHeader.classList.remove('shadow-lg');
       }
     }
+    function maintainScrollBehaviour(e): void {
+      if (window.innerWidth > 640) {
+        document.body.classList.remove('overflow-hidden');
+      }
+    }
     document.addEventListener('scroll', toggleClassList);
+    window.addEventListener('resize', maintainScrollBehaviour);
     return () => {
       document.removeEventListener('scroll', toggleClassList);
+      window.removeEventListener('resize', maintainScrollBehaviour);
     };
   }, []);
 
   const toggleNavMenu = (open: boolean) => {
     const menu = document.querySelector('.nav-menu');
+    const menuButton = document.querySelector('.menu-button');
+    const closeButton = document.querySelector('.close-button');
     if (!menu) return;
     const classes = ['flex', 'flex-col', 'justify-center', 'items-center'];
     if (open) {
       menu.classList.remove('hidden');
       classes.forEach((fc) => menu.classList.add(fc));
-      document.querySelector('body').classList.add('overflow-hidden');
+      document.body.classList.add('overflow-hidden');
+      menuButton.classList.add('hidden');
+      closeButton.classList.remove('hidden');
     } else {
       menu.classList.add('hidden');
       classes.forEach((fc) => menu.classList.remove(fc));
-      document.querySelector('body').classList.remove('overflow-hidden');
+      document.body.classList.remove('overflow-hidden');
+      menuButton.classList.remove('hidden');
+      closeButton.classList.add('hidden');
     }
   };
 
@@ -75,42 +89,51 @@ const Nav = () => {
   const openMenu = () => toggleNavMenu(true);
 
   return (
-    <header
-      className="fixed top-0 z-20 w-full px-8 md:px-12 bg-opacity-90 bg-dark backdrop-filter backdrop-blur-lg filter-none"
-      style={{ height: '70px' }}
-      id="header-nav"
-    >
-      <div className="nav-links">
-        <Fade top>
-          <StaticImage
-            src="../../images/logo.png"
-            alt="Logo"
-            width={50}
-            placeholder="none"
-          />
-        </Fade>
-        <nav className="relative">
-          <span className="hidden sm:block">
-            <NavLinks closeMenu={closeMenu} />
-          </span>
-          <Fade top delay={100}>
-            <Menu
-              className="block text-secondary sm:hidden"
-              onClick={openMenu}
-            />
+    <>
+      <header
+        className="fixed top-0 z-20 w-full px-8 md:px-12 bg-opacity-80 bg-dark backdrop-filter backdrop-blur filter-none"
+        style={{ height: navHeight }}
+        id="header-nav"
+      >
+        <div className="nav-links">
+          <Fade top>
+            <Link to="/" onClick={closeMenu}>
+              <StaticImage
+                src="../../images/logo.png"
+                alt="Logo"
+                width={50}
+                placeholder="none"
+              />
+            </Link>
           </Fade>
-          <span
-            className="fixed inset-0 z-30 hidden min-h-screen py-12 bg-opacity-90 sm:hidden bg-dark nav-menu backdrop-filter backdrop-blur filter-none"
-            style={{ width: '100vw' }}
-          >
-            <NavLinks closeMenu={closeMenu} />
-            <Fade top delay={600}>
-              <X className="mt-5" onClick={closeMenu} />
+          <nav className="relative">
+            <span className="hidden sm:block">
+              <NavLinks closeMenu={closeMenu} />
+            </span>
+            <Fade top delay={100}>
+              <Menu
+                className="text-secondary sm:hidden menu-button"
+                onClick={openMenu}
+              />
+              <X
+                className="hidden text-secondary sm:hidden close-button"
+                onClick={closeMenu}
+              />
             </Fade>
-          </span>
-        </nav>
-      </div>
-    </header>
+          </nav>
+        </div>
+      </header>
+      <span
+        className="fixed inset-0 z-30 hidden h-full bg-opacity-90 sm:hidden bg-dark nav-menu backdrop-filter backdrop-blur filter-none"
+        style={{
+          width: '100vw',
+          transform: `translate(0,${navHeight})`,
+          height: `calc(100vh - ${navHeight})`,
+        }}
+      >
+        <NavLinks closeMenu={closeMenu} />
+      </span>
+    </>
   );
 };
 

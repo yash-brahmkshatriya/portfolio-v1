@@ -147,12 +147,13 @@
 html {
   scrollbar-width: thin;
   scrollbar-color: theme('colors.dark.light');
+  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100%;
   width: 100%;
-  @apply bg-dark;
+  @apply bg-dark sm:overflow-auto;
 }
 body::-webkit-scrollbar {
   width: 12px;
