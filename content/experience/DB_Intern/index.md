@@ -3,7 +3,7 @@ date: '2021-05-31'
 title: 'Technical Analyst Intern'
 company: 'Deutsche Bank'
 location: 'Pune, India'
-range: 'May - July, 2021'
+range: 'May - Jul, 2021'
 ---
 
 - Engineered and developed a hackathon management web app using React.js, Spring MVC, Ant Design, and MySQL

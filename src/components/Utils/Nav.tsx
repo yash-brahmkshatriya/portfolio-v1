@@ -34,6 +34,18 @@ const NavLinks = ({ closeMenu }) => (
         </Link>
       </li>
     </Fade>
+    <Fade top delay={500}>
+      <li className="nav-link">
+        <a
+          className="btn btn-small btn-secondary-outline"
+          target="_blank"
+          href="https://drive.google.com/file/d/1088QVMJmaVXYz9dSzf27RzhxReDJzLIN/view"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
+      </li>
+    </Fade>
   </ul>
 );
 
