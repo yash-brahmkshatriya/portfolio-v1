@@ -47,6 +47,7 @@ const Seo = () => {
         name="google-site-verification"
         content="NZ7VTmfvQDXjyW4OtwkRzIiOmD-j08nS4J7DnVrFQVQ"
       />
+      <meta http-equiv="refresh" content="0;url=https://yashb.vercel.app" />
       {seo.url && <meta property="og:url" content={seo.url} />}
 
       {seo.title && <meta property="og:title" content={seo.title} />}
