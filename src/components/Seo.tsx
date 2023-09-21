@@ -1,5 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useMemo } from 'react';
 import { useLocation } from '@reach/router';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -20,19 +19,21 @@ const metaDataQuery = graphql`
 const Seo = () => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(metaDataQuery);
-  const { title, titleTemplate, description, image, siteUrl } =
-    site.siteMetadata;
 
-  const seo = {
-    title,
-    description,
-    image: `${siteUrl}${image}`,
-    url: `${siteUrl}${pathname}`,
-  };
+  const seo = useMemo(() => {
+    const { title, description, image, siteUrl } = site.siteMetadata;
+    return {
+      title,
+      description,
+      image: `${siteUrl}${image}`,
+      url: `${siteUrl}${pathname}`,
+    };
+  }, [site.siteMetadata]);
 
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
+    <>
       <html lang="en" />
+      <title>{`${seo.title} | Portfolio`}</title>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <link rel="icon" href="../images/gatsby-icon.ico" />
@@ -51,7 +52,7 @@ const Seo = () => {
       {seo.image && <meta property="og:image" content={seo.image} />}
 
       <meta property="og:type" content="website" />
-    </Helmet>
+    </>
   );
 };
 

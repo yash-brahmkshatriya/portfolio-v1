@@ -31,19 +31,22 @@
 
 @layer components {
   .btn {
-    @apply rounded cursor-pointer sm:px-7 sm:py-3 px-4 py-2;
+    @apply px-4 py-2 rounded cursor-pointer sm:px-7 sm:py-3;
   }
   .btn-small {
     @apply px-4 py-2;
   }
   .btn-secondary-outline {
-    @apply text-secondary  border-secondary hover:bg-secondary-slate2 border-1 transition duration-150 ease-linear;
+    @apply transition duration-150 ease-linear text-secondary border-secondary hover:bg-secondary-slate2 border-1;
   }
   .intro-name {
-    @apply cursor-default text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    @apply text-xl cursor-default xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+  }
+  .intro-description {
+    @apply text-sm text-gray-400 cursor-default xs:text-base sm:text-lg md:text-xl lg:text-2xl;
   }
   .typewriter {
-    @apply cursor-default text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+    @apply text-lg cursor-default xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl;
   }
   .border-1 {
     border-width: 1px;
@@ -52,7 +55,7 @@
     @apply text-gray-400 lg:mb-4;
   }
   .social-icon {
-    @apply inline-block transition duration-150 ease-linear transform hover:-translate-y-1 hover:text-secondary focus:-translate-y-1 focus:text-secondary lg:mx-0 mx-2;
+    @apply inline-block mx-2 transition duration-150 ease-linear transform hover:-translate-y-1 hover:text-secondary focus:-translate-y-1 focus:text-secondary lg:mx-0;
   }
   .section-heading {
     @apply flex items-center mt-2 mb-10 text-3xl md:text-5xl lg:text-6xl font-display text-secondary whitespace-nowrap;
@@ -66,57 +69,57 @@
     @apply ml-5 bg-gray-400;
   }
   .tab-list {
-    @apply relative flex p-0 m-0 overflow-x-auto list-none w-full sm:w-max sm:block sm:overflow-visible;
+    @apply relative flex w-full p-0 m-0 overflow-x-auto list-none sm:w-max sm:block sm:overflow-visible;
   }
   .tab-button {
-    @apply flex items-center w-full px-5 pb-1 text-left bg-transparent border-b-2 h-11 whitespace-nowrap border-dark-light text-sm md:text-base;
+    @apply flex items-center w-full px-5 pb-1 text-sm text-left bg-transparent border-b-2 h-11 whitespace-nowrap border-dark-light md:text-base;
   }
   .tab-panels {
     @apply relative w-full mt-8 md:mt-0;
   }
   .tab-panel {
-    @apply h-auto leading-5 w-full px-2 py-1 max-w-lg text-justify;
+    @apply w-full h-auto max-w-lg px-2 py-1;
   }
   .jorr-list > ul {
-    @apply p-0 m-0 list-none text-gray-300 text-sm md:text-base;
+    @apply p-0 m-0 text-sm text-gray-300 list-none md:text-base;
   }
   .jorr-list > ul li {
-    @apply mb-4 relative pl-7;
+    @apply relative mb-4 pl-7;
   }
   .jorr-list > ul li::before {
     content: '▹';
     @apply absolute left-0 text-secondary;
   }
   .tech-list {
-    @apply flex justify-start flex-wrap list-none;
+    @apply flex flex-wrap justify-start list-none;
   }
   .tech-list-item {
-    @apply mr-5 leading-4 text-gray-400 mb-2 font-medium text-sm sm:text-base;
+    @apply mb-2 mr-5 text-sm font-medium leading-4 text-gray-400 sm:text-base;
   }
   .project-links {
     @apply flex flex-wrap;
   }
   .project-link {
-    @apply mr-4 text-gray-200 hover:text-secondary focus:text-secondary transition ease-linear;
+    @apply mr-4 text-gray-200 transition ease-linear hover:text-secondary focus:text-secondary;
   }
   .footer-credits {
     @apply text-gray-200;
     @apply transition duration-150 ease-linear;
   }
   .nav-links {
-    @apply items-center justify-between w-full h-full max-w-4xl mx-auto flex;
+    @apply flex items-center justify-between w-full h-full max-w-4xl mx-auto;
   }
   .nav-link {
-    @apply p-2 relative my-4 sm:mx-1 sm:my-0;
+    @apply relative p-2 my-4 sm:mx-1 sm:my-0;
   }
   .nav-link > a {
-    @apply hover:text-secondary focus:text-secondary transition duration-150 ease-linear;
+    @apply transition duration-150 ease-linear hover:text-secondary focus:text-secondary;
   }
   .trans-img-container {
     @apply transition duration-150 ease-linear bg-secondary-slate hover:bg-transparent focus:bg-transparent;
   }
   .trans-img {
-    @apply filter grayscale transition ease-linear duration-150 contrast-100 mix-blend-multiply brightness-50 hover:mix-blend-normal focus:mix-blend-normal hover:filter-none focus:filter-none;
+    @apply transition duration-150 ease-linear filter grayscale contrast-100 mix-blend-multiply brightness-50 hover:mix-blend-normal focus:mix-blend-normal hover:filter-none focus:filter-none;
   }
 }
 
@@ -171,5 +174,5 @@ body::-webkit-scrollbar-thumb {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 1fr auto;
-  @apply font-body text-gray-200;
+  @apply text-gray-200 font-body;
 }

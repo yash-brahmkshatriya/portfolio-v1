@@ -1,7 +1,7 @@
 const isDevEnv = process.env.NODE_ENV === 'development';
-const siteUrl = isDevEnv
-  ? 'http://localhost:8000'
-  : 'https://yashb.gatsbyjs.io';
+const DEV_PORT = process.env.DEV_PORT ?? '8000';
+const PROD_URL = process.env.PROD_URL ?? 'https://yashb.vercel.app';
+const siteUrl = isDevEnv ? `http://localhost:${DEV_PORT}` : PROD_URL;
 
 const description =
   'Full stack developer, competitive coder, and VSCode lover 😜';
@@ -15,7 +15,6 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-postcss',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
