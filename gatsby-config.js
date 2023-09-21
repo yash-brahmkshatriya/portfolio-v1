@@ -1,6 +1,6 @@
 const isDevEnv = process.env.NODE_ENV === 'development';
 const DEV_PORT = process.env.DEV_PORT ?? '8000';
-const PROD_URL = process.env.PROD_URL ?? '';
+const PROD_URL = process.env.PROD_URL ?? 'https://yashb.gatsbyjs.io';
 const siteUrl = isDevEnv ? `http://localhost:${DEV_PORT}` : PROD_URL;
 
 const description =
