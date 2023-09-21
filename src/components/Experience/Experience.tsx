@@ -1,4 +1,10 @@
-import React, { KeyboardEvent, useEffect, useRef, useState } from 'react';
+import React, {
+  KeyboardEvent,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Section from '../Utils/Section';
 import Fade from 'react-reveal/Fade';
@@ -17,7 +23,7 @@ const Experience = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        sort: { order: DESC, fields: frontmatter___date }
+        sort: { frontmatter: { date: DESC } }
         filter: { fileAbsolutePath: { regex: "/experience/" } }
       ) {
         nodes {
@@ -33,11 +39,11 @@ const Experience = () => {
     }
   `);
   const expData: Array<expType> = data.allMarkdownRemark.nodes;
-  const [activeTabId, setActiveTabId] = useState(0);
-  const [tabInFocus, setTabInFocus] = useState(null);
-  const tabs = useRef([]);
+  const [activeTabId, setActiveTabId] = useState<number>(0);
+  const [tabInFocus, setTabInFocus] = useState<number>(0);
+  const tabs = useRef<HTMLButtonElement[]>([]);
 
-  const focusTab = () => {
+  const focusTab = useCallback(() => {
     if (tabs.current[tabInFocus]) {
       tabs.current[tabInFocus].focus();
       return;
@@ -48,17 +54,17 @@ const Experience = () => {
     if (tabInFocus < 0) {
       setTabInFocus(tabs.current.length - 1);
     }
-  };
+  }, [tabInFocus]);
 
   useEffect(focusTab, [tabInFocus]);
 
   const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault();
-      setTabInFocus(tabInFocus + 1);
+      setTabInFocus((prev) => prev + 1);
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
-      setTabInFocus(tabInFocus - 1);
+      setTabInFocus((prev) => prev - 1);
     }
   };
 
@@ -81,7 +87,11 @@ const Experience = () => {
                   }`}
                   key={i}
                   id={`tab-${i}`}
-                  ref={(el) => (tabs.current[i] = el)}
+                  ref={(el) => {
+                    if (el !== null) {
+                      tabs.current[i] = el;
+                    }
+                  }}
                   onClick={() => setActiveTabId(i)}
                   role="tab"
                   tabIndex={activeTabId === i ? 0 : -1}
@@ -108,10 +118,13 @@ const Experience = () => {
                     aria-hidden={!isActive}
                     hidden={!isActive}
                   >
-                    <h3 className="mb-1 text-lg font-medium leading-5 md:text-xl">
-                      <span>{title}</span>{' '}
-                      <span className="text-secondary">@ {company}</span>
+                    <h3 className="mb-0 text-lg font-medium md:text-xl">
+                      {title}
                     </h3>
+                    <h4 className="mb-2 text-sm font-medium text-secondary md:text-base">
+                      {company}
+                    </h4>
+
                     <p className="mb-6 font-mono text-xs text-gray-400">
                       {range}
                     </p>

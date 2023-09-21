@@ -4,22 +4,14 @@ const AboutParagraph = () => {
   return (
     <div className="text-sm text-justify font-body sm:text-base">
       <p className="mb-4">
-        Hi, I'm Yash! I'm currently studying{' '}
-        <span className="text-secondary">
-          Computer Science &amp; Engineering{' '}
-        </span>
-        at Institute of Technology, Nirma University.
+        Hello there! I'm Yash, I'm a developer based in Pune, India. My current
+        work as a <span className="font-bold">Senior Analyst</span> at Deutsche
+        Bank involves the migration of fullstack applications.
       </p>
+      <p className="mb-1 text-secondary">Some fun facts about me ?</p>
       <p className="mb-4">
-        I have experience working at{' '}
-        <span className="text-secondary">Deutsche Bank </span>
-        as Technical Analyst Intern.
-      </p>
-      <p className="mb-4">
-        I love solving problems on various competitive coding platforms like
-        <span className="text-secondary"> Codeforces </span> and
-        <span className="text-secondary"> Hackerearth. </span>I enjoy teaching
-        juniors the fundamentals of Data Structures and Algorithms.
+        Thriller, mystery, and sci-fi movies and series are my kinda things.
+        Also, I love solving chess puzzles and playing rapid chess.
       </p>
     </div>
   );

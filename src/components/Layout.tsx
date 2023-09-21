@@ -3,12 +3,10 @@ import Footer from './Utils/Footer';
 import SideMail from './Socials/SideMail';
 import VerticalSocials from './Socials/VerticalSocials';
 import Nav from './Utils/Nav';
-import SEO from './Seo';
 
 const Layout = ({ children }) => {
   return (
     <div id="root">
-      <SEO />
       <div className="flex flex-col min-h-screen">
         <VerticalSocials />
         <Nav />

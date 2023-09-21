@@ -1,5 +1,5 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ExternalLink, GitHub } from 'react-feather';
 import { projectType } from './project';
 import Fade from 'react-reveal/Fade';
@@ -12,7 +12,11 @@ interface props {
 const Featured = ({ project, idx }: props) => {
   const { title, external, company, repo, coverImg, tech, repoPrivate } =
     project.frontmatter;
-  const cover = coverImg === null ? null : getImage(coverImg);
+
+  const cover = useMemo(
+    () => (coverImg ? getImage(coverImg) : null),
+    [coverImg]
+  );
 
   return (
     <li
@@ -23,12 +27,14 @@ const Featured = ({ project, idx }: props) => {
     >
       <Fade bottom>
         <div className="relative trans-img-container" style={{ flex: 3 }}>
-          <GatsbyImage
-            image={cover}
-            alt={title}
-            className="h-full sm:w-full"
-            imgClassName="object-cover w-auto sm:h-auto trans-img"
-          />
+          {cover ? (
+            <GatsbyImage
+              image={cover}
+              alt={title}
+              className="h-full sm:w-full"
+              imgClassName="object-cover w-auto sm:h-auto trans-img"
+            />
+          ) : null}
         </div>
         <div
           className="z-10 px-6 pt-6 pb-5 group bg-dark-light"

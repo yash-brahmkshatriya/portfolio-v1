@@ -1,10 +1,10 @@
 ---
-date: "2022-07-18"
-title: "Analyst"
-company: "Deutsche Bank"
-location: "Pune, India"
-range: "Jul, 2022 - Present"
+date: '2022-07-18'
+title: 'Senior Analyst'
+company: 'Deutsche Bank'
+location: 'Pune, India'
+range: 'Jul, 2022 - Present'
 ---
 
-- Working on migration of legacy internal application
-- Technologies included are React.js, Spring boot, Oracle SQL (PL/SQL)
+- Migration of internal legacy fullstack application
+- Technologies included are React.js, Module Federation, Spring boot, PL/SQL, and R-Socket
