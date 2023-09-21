@@ -37,9 +37,15 @@ const Seo = () => {
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <link rel="icon" href="../images/gatsby-icon.ico" />
+      {/* site verification tag for old domain */}
       <meta
         name="google-site-verification"
         content="E1-JaP5hm5_cK1ozAzEdl-352TaKNqMu6rijM5Wa-Xo"
+      />
+      {/* site verification tag for new domain */}
+      <meta
+        name="google-site-verification"
+        content="NZ7VTmfvQDXjyW4OtwkRzIiOmD-j08nS4J7DnVrFQVQ"
       />
       {seo.url && <meta property="og:url" content={seo.url} />}
 
