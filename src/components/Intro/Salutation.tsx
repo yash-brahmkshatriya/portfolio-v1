@@ -22,7 +22,7 @@ const Salutation = () => {
           <span className="font-bold text-primary">Yash Brahmkshatriya</span>
         </h1>
         <h2 className="mb-1 intro-description">
-          I code beautifully things, and I love what I do.
+          I code amazing things, and I love what I do.
         </h2>
       </div>
 
