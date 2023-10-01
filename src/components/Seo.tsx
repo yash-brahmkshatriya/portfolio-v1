@@ -1,24 +1,10 @@
 import React, { useMemo } from 'react';
 import { useLocation } from '@reach/router';
-import { useStaticQuery, graphql } from 'gatsby';
-
-const metaDataQuery = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        siteUrl
-        title
-        titleTemplate
-        description
-        image
-      }
-    }
-  }
-`;
+import { useStaticMetadata } from '../staticQueries/useStaticMetadata';
 
 const Seo = () => {
   const { pathname } = useLocation();
-  const { site } = useStaticQuery(metaDataQuery);
+  const { site } = useStaticMetadata();
 
   const seo = useMemo(() => {
     const { title, description, image, siteUrl } = site.siteMetadata;

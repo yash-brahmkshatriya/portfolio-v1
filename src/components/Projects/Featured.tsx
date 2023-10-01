@@ -1,15 +1,16 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useMemo } from 'react';
-import { ExternalLink, GitHub } from 'react-feather';
-import { projectType } from './project';
 import Fade from 'react-reveal/Fade';
+import { ExternalLink, GitHub } from 'react-feather';
+import { ProjectData } from './types';
+import { MarkDownQueryNode } from '../../types';
 
-interface props {
-  project: projectType;
+interface FeaturedProjectProps {
+  project: MarkDownQueryNode<ProjectData>;
   idx: number;
 }
 
-const Featured = ({ project, idx }: props) => {
+const Featured = ({ project, idx }: FeaturedProjectProps) => {
   const { title, external, company, repo, coverImg, tech, repoPrivate } =
     project.frontmatter;
 

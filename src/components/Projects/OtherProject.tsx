@@ -1,14 +1,15 @@
 import React from 'react';
 import { ExternalLink, Folder, GitHub } from 'react-feather';
-import { projectType } from './project';
 import Fade from 'react-reveal/Fade';
+import { ProjectData } from './types';
+import { MarkDownQueryNode } from '../../types';
 
-interface props {
-  project: projectType;
+interface OtherProjectProps {
+  project: MarkDownQueryNode<ProjectData>;
   idx: number;
 }
 
-const OtherProject = ({ project, idx }: props) => {
+const OtherProject = ({ project, idx }: OtherProjectProps) => {
   const { repo, title, external, tech, repoPrivate } = project.frontmatter;
   return (
     <li

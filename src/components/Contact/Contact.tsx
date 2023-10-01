@@ -1,10 +1,16 @@
 import React from 'react';
 import Section from '../Utils/Section';
-import config from '../../config';
 import { Mail } from 'react-feather';
 import Fade from 'react-reveal/Fade';
+import { MarkDownQueryData, SocialData } from '../../types';
+import { useStaticSocialData } from '../../staticQueries/useStaticSocialData';
 
 const Contact = () => {
+  const socialsData: MarkDownQueryData<SocialData> = useStaticSocialData();
+
+  const email =
+    socialsData.allMarkdownRemark.nodes[0]?.frontmatter.email ?? 'N/A';
+
   return (
     <Section
       id="contact"
@@ -20,7 +26,7 @@ const Contact = () => {
           coffee, or feedback on my portfolio, my inbox is open !
         </p>
         <a
-          href={`mailto:${config.email}`}
+          href={`mailto:${email}`}
           className="inline-flex items-center btn btn-secondary-outline"
           rel="noopener"
         >

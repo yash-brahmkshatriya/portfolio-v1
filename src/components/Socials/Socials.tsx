@@ -1,24 +1,22 @@
+import { useStaticQuery } from 'gatsby';
 import React from 'react';
-import config from '../../config';
 import { GitHub, Linkedin, Instagram, ExternalLink } from 'react-feather';
+import { MarkDownQueryData, SocialMediaItem, SocialData } from '../../types';
+import { useStaticSocialData } from '../../staticQueries/useStaticSocialData';
 
-interface iconProps {
+interface IconProps {
   name?: string;
   className?: string;
   size?: number;
 }
 
-interface socialLiProps {
-  sm?: {
-    name: string;
-    url: string;
-  };
+type SocialListItemProps = SocialMediaItem & {
   idx?: number | string;
   className?: string;
   targetSelf?: boolean;
-}
+};
 
-const Icon = ({ name, className, size }: iconProps) => {
+const Icon = ({ name, className, size }: IconProps) => {
   const sz = size || 20;
   const classes = className || '';
   switch (name) {
@@ -33,28 +31,39 @@ const Icon = ({ name, className, size }: iconProps) => {
   }
 };
 
-const SocialLi = ({ sm, idx, className, targetSelf }: socialLiProps) => {
+const SocialLi = ({
+  name,
+  url,
+  idx,
+  className,
+  targetSelf,
+}: SocialListItemProps) => {
   const extraClasses = className || '';
   return (
     <li key={idx} className={`social-icons ${extraClasses}`}>
       <a
-        href={sm.url}
-        aria-label={sm.name}
+        href={url}
+        aria-label={name}
         target={targetSelf ? '_self' : '_blank'}
         rel="noreferrer"
         className="social-icon"
       >
-        <Icon name={sm.name} />
+        <Icon name={name} />
       </a>
     </li>
   );
 };
 
 const Socials = () => {
+  const socialMDData: MarkDownQueryData<SocialData> = useStaticSocialData();
+  const socialData: SocialData | null =
+    socialMDData.allMarkdownRemark.nodes[0]?.frontmatter ?? null;
   return (
     <ul className="bottom-0 flex flex-row items-center justify-center lg:flex-col lg:justify-end sidebar">
-      {config.socialMedia &&
-        config.socialMedia.map((sm, idx) => <SocialLi sm={sm} idx={idx} />)}
+      {socialData &&
+        socialData.socials.map((sm, idx) => (
+          <SocialLi key={`socials-${idx}`} {...sm} idx={idx} />
+        ))}
     </ul>
   );
 };
