@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
 import { useLocation } from '@reach/router';
-import { useStaticQuery } from 'gatsby';
 import { useStaticMetadata } from '../staticQueries/useStaticMetadata';
 
 const Seo = () => {

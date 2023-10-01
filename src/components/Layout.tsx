@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from './Utils/Footer';
 import SideMail from './Socials/SideMail';
 import VerticalSocials from './Socials/VerticalSocials';
-import Nav from './Utils/Nav';
+import Nav from './Utils/Nav/Nav';
 
 const Layout = ({ children }) => {
   return (
