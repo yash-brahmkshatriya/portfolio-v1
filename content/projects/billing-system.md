@@ -1,6 +1,6 @@
 ---
 date: '2020-05-10'
-title: 'Billing System'
+title: 'Billing System v1'
 repo: 'https://github.com/yash-brahmkshatriya/billing-system'
 repoPrivate: false
 coverImg: './images/billing-system.png'
@@ -11,8 +11,7 @@ tech:
   - Express
   - Heroku
 featured: false
-showInProjects: false
+showInProjects: true
 ---
 
-Manage all your bills for your business at one place. Generate, view and download your bills anytime, anywhere.\
-Version 2 under development. 👩‍💻
+Manage all your bills for your business at one place. Generate, view and download your bills anytime, anywhere.
