@@ -12,8 +12,8 @@ tech:
   - Spring MVC
   - Hibernate
   - MySQL
-featured: true
-showInProjects: false
+featured: false
+showInProjects: true
 ---
 
 Platform to participate and organize hackathons. Create an event and sit back and relax. We will handle everything. Participate to team up, and grind to have the most liked and commented idea in an event. Access archives of completed events to have those as reference.
