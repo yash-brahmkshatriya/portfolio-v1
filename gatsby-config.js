@@ -54,5 +54,6 @@ module.exports = {
         path: `${__dirname}/content/projects`,
       },
     },
+    'gatsby-plugin-meta-redirect',
   ],
 };
