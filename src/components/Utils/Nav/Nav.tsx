@@ -27,7 +27,7 @@ const NavLinks = ({ closeMenu }: NavLinksProps) => (
         <a
           className="btn btn-small btn-secondary-outline"
           target="_blank"
-          href="https://drive.google.com/file/d/1088QVMJmaVXYz9dSzf27RzhxReDJzLIN/view"
+          href="https://drive.google.com/file/d/17hEnVT-iZokJHKXcH-CHlw1ixO3727fc/view?usp=sharing"
           rel="noopener noreferrer"
         >
           Resume

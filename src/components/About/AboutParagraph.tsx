@@ -4,15 +4,20 @@ const AboutParagraph = () => {
   return (
     <div className="text-sm text-justify font-body sm:text-base">
       <p className="mb-4">
-        Hello there! I'm Yash, I'm a developer, enjoying life in Pune, and
-        sometime in my native, Gandhinagar. I'm currently working as Software
-        engineer at Deutsche Bank.
+        I'm a passionate software engineer with almost three years of experience
+        in designing and building scalable applications. With a strong
+        foundation in data structures and algorithms, I specialize in
+        problem-solving and developing efficient solutions.
+      </p>
+      <p className="mb-4">
+        My expertise spans across various technologies, and I love working on
+        challenging projects that push the boundaries of innovation.
       </p>
       <p className="mb-1 text-secondary">Some fun facts about me ?</p>
       <p className="mb-4">
-        Thriller, mystery, and sci-fi content are my kinda things. Also, I love
-        solving chess puzzles and playing rapid chess. I play pool and snooker
-        as well.
+        When I'm not coding, I enjoy exploring new tech trends, watching
+        mystery, thriller and sci-fi content. I also enjoy playing pool and
+        snooker.
       </p>
     </div>
   );
