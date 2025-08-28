@@ -4,6 +4,7 @@ title: 'Software Engineer'
 company: 'Deutsche Bank'
 location: 'Pune, India'
 range: 'Jul, 2022 - Aug, 2025'
+active: true
 ---
 
 - Mitigated external software support risk by implementing reactive

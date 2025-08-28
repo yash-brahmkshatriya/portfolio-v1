@@ -4,6 +4,7 @@ title: 'Executive Head'
 company: 'CodeAdda Programming Club'
 location: 'Ahmedabad, India'
 range: 'Nov, 2020 - Nov, 2021'
+active: false
 ---
 
 - Explained various competitive programming concepts to juniors

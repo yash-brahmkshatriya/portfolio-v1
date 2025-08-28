@@ -3,4 +3,5 @@ export type ExperienceData = {
   location: string;
   range: string;
   title: string;
+  active: boolean;
 };
