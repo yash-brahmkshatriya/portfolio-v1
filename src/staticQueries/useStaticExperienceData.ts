@@ -17,6 +17,7 @@ export const useStaticExperienceData =
                 location
                 range
                 title
+                active
               }
               html
             }

@@ -1,4 +1,10 @@
-import React, { KeyboardEvent, useCallback, useRef, useState } from 'react';
+import React, {
+  KeyboardEvent,
+  useCallback,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import Fade from 'react-reveal/Fade';
 import Section from '../Utils/Section';
 import { useSkipInitialLayoutEffect } from '../../hooks/useSkipInitialEffects';
@@ -8,7 +14,10 @@ import { useStaticExperienceData } from '../../staticQueries/useStaticExperience
 
 const Experience = () => {
   const data: MarkDownQueryData<ExperienceData> = useStaticExperienceData();
-  const expData = data.allMarkdownRemark.nodes ?? [];
+  const activeExperienceData = useMemo(() => {
+    return data.allMarkdownRemark.nodes.filter((exp) => exp.frontmatter.active);
+  }, [data.allMarkdownRemark.nodes]);
+
   const [activeTabId, setActiveTabId] = useState<number>(0);
   const [tabInFocus, setTabInFocus] = useState<number>(0);
   const tabs = useRef<HTMLButtonElement[]>([]);
@@ -52,7 +61,7 @@ const Experience = () => {
             aria-label="Experience Tabs"
             onKeyDown={onKeyDown}
           >
-            {expData.map((exp, i) => (
+            {activeExperienceData.map((exp, i) => (
               <button
                 className={`tab-button hover:tab-button-glow focus:tab-button-glow ${
                   activeTabId === i ? 'text-secondary border-secondary' : ''
@@ -75,7 +84,7 @@ const Experience = () => {
             ))}
           </div>
           <div className="tab-panels">
-            {expData.map((exp, i) => {
+            {activeExperienceData.map((exp, i) => {
               const { title, company, range } = exp.frontmatter;
               const htmlExp = exp.html;
               const isActive: boolean = activeTabId === i;
