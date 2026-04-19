@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import Fade from 'react-reveal/Fade';
+import Animation from '../Animation/Animation';
 import Section from '../Utils/Section';
 import Featured from './Featured';
 import { ProjectData } from './types';
@@ -22,19 +22,19 @@ const Projects = () => {
 
   return (
     <Section id="projects" className="max-w-4xl min-h-screen py-20 mx-auto">
-      <Fade bottom>
+      <Animation.Fade direction="bottom">
         <h2 className="section-heading after-h-line">Things I've built</h2>
-      </Fade>
+      </Animation.Fade>
       <ul className="mb-10">
         {featuredProjects.map((pr, idx) => (
           <Featured key={`featured-project-${idx}`} project={pr} idx={idx} />
         ))}
       </ul>
-      <Fade bottom>
+      <Animation.Fade direction="bottom">
         <h3 className="mb-12 text-xl font-medium text-center text-gray-200 mt-28 sm:text-3xl">
           Other Noteworthy Projects
         </h3>
-      </Fade>
+      </Animation.Fade>
       <ul className="grid grid-cols-2 gap-5">
         {noteworthyProjects.map((pr, idx) => (
           <OtherProject

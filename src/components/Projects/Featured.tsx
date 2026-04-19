@@ -1,6 +1,6 @@
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import React, { useMemo } from 'react';
-import Fade from 'react-reveal/Fade';
+import Animation from '../Animation/Animation';
 import { ExternalLink, GitHub } from 'react-feather';
 import { ProjectData } from './types';
 import { MarkDownQueryNode } from '../../types';
@@ -16,7 +16,7 @@ const Featured = ({ project, idx }: FeaturedProjectProps) => {
 
   const cover = useMemo(
     () => (coverImg ? getImage(coverImg) : null),
-    [coverImg]
+    [coverImg],
   );
 
   return (
@@ -26,7 +26,7 @@ const Featured = ({ project, idx }: FeaturedProjectProps) => {
         idx % 2 == 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
       }`}
     >
-      <Fade bottom>
+      <Animation.Fade direction="bottom">
         <div className="relative trans-img-container" style={{ flex: 3 }}>
           {cover ? (
             <GatsbyImage
@@ -92,7 +92,7 @@ const Featured = ({ project, idx }: FeaturedProjectProps) => {
             </footer>
           </div>
         </div>
-      </Fade>
+      </Animation.Fade>
     </li>
   );
 };

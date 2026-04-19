@@ -15,24 +15,34 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^5.12.4",
-    "gatsby-plugin-image": "^3.12.0",
-    "gatsby-plugin-manifest": "^5.12.0",
-    "gatsby-plugin-postcss": "^6.12.0",
+    "framer-motion": "^12.38.0",
+    "gatsby": "^5.13.7",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-postcss": "^6.13.1",
     "gatsby-plugin-robots-txt": "^1.8.0",
-    "gatsby-plugin-sharp": "^5.12.0",
-    "gatsby-plugin-sitemap": "^6.12.0",
-    "gatsby-source-filesystem": "^5.12.0",
-    "gatsby-transformer-remark": "^6.12.0",
-    "gatsby-transformer-sharp": "^5.12.0",
-    "postcss": "^8.4.29",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-remark": "^6.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "postcss": "^8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
-    "react-reveal": "^1.2.2",
-    "typewriter-effect": "^2.20.1"
+    "typewriter-effect": "^2.21.0"
+  },
+  "overrides": {
+    "lodash": "^4.17.21",
+    "immutable": "^4.3.7",
+    "cookie": "^0.7.0",
+    "path-to-regexp": "^0.1.13",
+    "serialize-javascript": "^7.0.5",
+    "tmp": "^0.2.3",
+    "webpack": "^5.105.0",
+    "file-type": "^16.5.4"
   },
   "devDependencies": {
-    "tailwindcss": "^2.2.15"
+    "tailwindcss": "^3.4.1"
   }
 }

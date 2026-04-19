@@ -7,25 +7,34 @@
   .sidebar::after {
     width: 1px;
     height: 100px;
-    /* show for screen size > lg */
     display: none;
     content: '';
     @apply bg-gray-400;
   }
+
   .typewriter > * {
     display: inline-block;
   }
-  @variants hover, focus {
-    .tab-button-glow {
-      outline: none;
-      @apply text-secondary bg-dark-light bg-opacity-40;
-    }
+
+  /* Define the base styles */
+  .tab-button-glow {
+    outline: none;
   }
-  @variants hover, focus, group-hover {
-    .footer-credits-glow {
-      outline: none;
-      @apply text-secondary;
-    }
+
+  /* Define the variant behavior inside the class using nesting */
+  .tab-button-glow:hover,
+  .tab-button-glow:focus {
+    @apply text-secondary bg-dark-light bg-opacity-40;
+  }
+
+  .footer-credits-glow {
+    outline: none;
+  }
+
+  .footer-credits-glow:hover,
+  .footer-credits-glow:focus,
+  .group:hover .footer-credits-glow {
+    @apply text-secondary;
   }
 }
 
