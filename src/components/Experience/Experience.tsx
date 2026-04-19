@@ -5,7 +5,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import Fade from 'react-reveal/Fade';
+import Animation from '../Animation/Animation';
 import Section from '../Utils/Section';
 import { useSkipInitialLayoutEffect } from '../../hooks/useSkipInitialEffects';
 import { MarkDownQueryData } from '../../types';
@@ -47,12 +47,12 @@ const Experience = () => {
         setTabInFocus((prev) => prev - 1);
       }
     },
-    [tabInFocus]
+    [tabInFocus],
   );
 
   return (
     <Section id="experience" className="max-w-3xl min-h-screen py-20 mx-auto">
-      <Fade bottom>
+      <Animation.Fade direction="bottom">
         <h2 className="section-heading after-h-line">My Experiences</h2>
         <div className="block sm:flex">
           <div
@@ -119,7 +119,7 @@ const Experience = () => {
             })}
           </div>
         </div>
-      </Fade>
+      </Animation.Fade>
     </Section>
   );
 };

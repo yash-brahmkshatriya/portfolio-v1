@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Menu, X } from 'react-feather';
-import Fade from 'react-reveal/Fade';
+import Animation from '../../Animation/Animation';
 import {
   maintainScrollBehaviour,
   toggleHeaderShadow,
@@ -14,15 +14,15 @@ import {
 const NavLinks = ({ closeMenu }: NavLinksProps) => (
   <ul className="flex flex-col items-center list-none font-heading sm:flex-row">
     {NAV_LINKS.map((nv, index) => (
-      <Fade top delay={(index + 1) * 100}>
+      <Animation.Fade direction="top" delay={(index + 1) * 0.1}>
         <li className="nav-link">
           <Link to={`/#${nv.sectionId}`} onClick={closeMenu}>
             {nv.label}
           </Link>
         </li>
-      </Fade>
+      </Animation.Fade>
     ))}
-    <Fade top delay={500}>
+    <Animation.Fade direction="top" delay={0.5}>
       <li className="nav-link">
         <a
           className="btn btn-small btn-secondary-outline"
@@ -33,7 +33,7 @@ const NavLinks = ({ closeMenu }: NavLinksProps) => (
           Resume
         </a>
       </li>
-    </Fade>
+    </Animation.Fade>
   </ul>
 );
 
@@ -42,11 +42,11 @@ const Nav = () => {
 
   const closeMenu = useCallback(
     () => setIsNavMenuOpen(false),
-    [setIsNavMenuOpen]
+    [setIsNavMenuOpen],
   );
   const openMenu = useCallback(
     () => setIsNavMenuOpen(true),
-    [setIsNavMenuOpen]
+    [setIsNavMenuOpen],
   );
 
   useEffect(() => {
@@ -83,7 +83,7 @@ const Nav = () => {
         id="header-nav"
       >
         <div className="nav-links">
-          <Fade top>
+          <Animation.Fade direction="top">
             <Link to="/" onClick={closeMenu}>
               <StaticImage
                 src="../../../images//logo.png"
@@ -92,12 +92,12 @@ const Nav = () => {
                 placeholder="none"
               />
             </Link>
-          </Fade>
+          </Animation.Fade>
           <nav className="relative">
             <span className="hidden sm:block">
               <NavLinks closeMenu={closeMenu} />
             </span>
-            <Fade top delay={100}>
+            <Animation.Fade direction="top" delay={0.1}>
               <Menu
                 className={`text-secondary sm:hidden ${
                   isNavMenuOpen ? 'hidden' : ''
@@ -110,7 +110,7 @@ const Nav = () => {
                 } text-secondary sm:hidden`}
                 onClick={closeMenu}
               />
-            </Fade>
+            </Animation.Fade>
           </nav>
         </div>
       </header>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '../Utils/Section';
 import { Mail } from 'react-feather';
-import Fade from 'react-reveal/Fade';
+import Animation from '../Animation/Animation';
 import { MarkDownQueryData, SocialData } from '../../types';
 import { useStaticSocialData } from '../../staticQueries/useStaticSocialData';
 
@@ -17,7 +17,7 @@ const Contact = () => {
       className="max-w-lg py-20 mx-auto text-center"
       style={{ minHeight: '480px' }}
     >
-      <Fade bottom>
+      <Animation.Fade direction="bottom">
         <h2 className="mt-2 mb-5 text-3xl text-center text-secondary md:text-4xl lg:text-5xl font-display whitespace-nowrap">
           Get in Touch
         </h2>
@@ -33,7 +33,7 @@ const Contact = () => {
           <Mail className="mr-2 text-secondary" size={17} />
           Say Hi
         </a>
-      </Fade>
+      </Animation.Fade>
     </Section>
   );
 };
